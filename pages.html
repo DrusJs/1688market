@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="1688">
+    <meta property="og:description" content="1688">
+    <meta property="og:image" content="img/1688-logo.svg">
+    <meta property="twitter:image" content="img/1688-logo.svg">
+    <meta name="description" content="1688">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body {
+            background-color: #F6F6FA;
+        }
+        .overflow-scroll::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .overflow-scroll {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .btn-outline-danger,
+        .btn-outline-warning {
+            pointer-events: none;
+        }
+    </style>
+
+    <title>1688 | Карта сайта</title>
+</head>
+<body>
+    <main class="main">
+        <div class="container">
+            <div class="d-flex flex-column align-items-center justify-content-center mx-auto py-1" style="min-height: 100dvh; max-width: 320px; width: 100%;">
+                <h1 class="text-center pb-3 w-100 mb-0" style="font-size: 2.8rem; border-bottom: 1px solid green;">Карта сайта</h1>
+                <div class="overflow-scroll w-100 px-2 py-3" style="max-height: calc(100dvh - 80px);">
+                    <div class="d-flex align-items-center flex-column gap-3 w-100">
+                        <a href="index.html" class="btn btn-outline-success w-100">Главная</a>
+                        <a href="404.html" class="btn btn-outline-success w-100">404</a>
+                        <a href="error.html" class="btn btn-outline-success w-100">Произошла ошибка</a>
+                        <a href="favorites.html" class="btn btn-outline-success w-100">Избранное</a>
+                        <a href="info.html" class="btn btn-outline-success w-100">Информация</a>
+                        <a href="catalog.html" class="btn btn-outline-warning w-100">
+                            Каталог
+                            <span class="spinner-border spinner-border-sm text-warning" role="status"></span>                              
+                        </a>
+                        <a href="product-card.html" class="btn btn-outline-warning w-100">
+                            Карточка товара
+                            <span class="spinner-border spinner-border-sm text-warning" role="status"></span>                              
+                        </a>
+                        <a href="basket-empty.html" class="btn btn-outline-danger w-100">Корзина (без авторизации)</a>
+                        <a href="basket.html" class="btn btn-outline-danger w-100">Корзина</a>
+                        <a href="order.html" class="btn btn-outline-danger w-100">Оформление заказа</a>
+                        <a href="account.html" class="btn btn-outline-danger w-100">Профиль</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

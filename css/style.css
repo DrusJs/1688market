@@ -39,6 +39,10 @@ body {
     color: var(--color-black-primary);
 }
 
+body.bg-gray {
+    background-color: #F6F6FA;
+}
+
 b, strong {
     font-weight: 700;
 }
@@ -73,11 +77,39 @@ h3.title {
     color: var(--color-black-secondary);
 }
 
-h4.title {
+h4.title,
+.item-title {
     font-size: 24px;
     font-weight: 500;
     color: var(--color-black-secondary);
 }
+
+h4.title .text {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.status {
+    padding: 10px 25px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.status.success {
+    background-color: var(--color-green);
+    color: var(--color-white);
+}
+.status.await {
+    background-color: var(--color-yellow);
+    color: #323234;
+}
+.status.refuse {
+    background-color: #B7B7B8;
+    color: var(--color-white);
+}
+
 
 p.text {
     line-height: 160%;
@@ -89,11 +121,18 @@ p.text-lg {
 p.text-title {
     font-size: 18px;
 }
-p.text-sm {
+p.text-sm,
+.text-sm {
     font-size: 15px;
 }
-p.text-lt {
+p.text-lt,
+.text-lt {
     font-size: 14px;
+}
+
+.separator {
+    width: 100%;
+    border-top: 1px solid #DBDBDB;
 }
 
 .fw-medium {
@@ -124,12 +163,17 @@ p.text-lt {
     color: #F63F3F;
 }
 
+.c-text {
+    color: #323234;
+}
+
 a.link-primary,
 a.link-primary:visited {
     color: var(--color-primary) !important;
 }
 
-h1.title .c-gray {
+h1.title .c-gray,
+h2.title .c-gray {
     font-size: 28px;
 }
 
@@ -502,9 +546,11 @@ h1.title .c-gray {
 }
 
 
-.product-item p {
+.product-item p,
+.account-wrapper p {
     margin-bottom: 0;
 }
+
 
 .product-image {
     overflow: hidden;
@@ -796,6 +842,39 @@ h1.title .c-gray {
     background-color: var(--color-primary);
     border-color: transparent;
 }
+.btn.btn-red {
+    color: #D92D20;
+}
+
+.btn.btn-acc-wallet {
+    width: 100%;
+    max-width: 400px;
+}
+
+.account-wallet th {
+    padding-bottom: 4px;
+    color: var(--color-gray-dark);
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.account-wallet td {
+    border-bottom: 1px solid #DBDBDB;
+    padding: 12px 12px 12px 0;
+    font-size: 18px;
+    color: var(--color-black-secondary);
+}
+
+.account-wallet tr td:first-child {
+    color: var(--color-gray-dark);
+}
+.account-wallet tr:last-child td {
+    border-bottom: 1px solid transparent;
+}
+
+.profile-tab {
+    max-width: 710px;
+}
 
 .order-item-counter {
     top: 0;
@@ -810,7 +889,55 @@ h1.title .c-gray {
     text-align: center;
 }
 
+.nav-account {
+    background-color: var(--color-white);
+    border-radius: 20px;
+    padding: 24px 28px;
+    width: fit-content;
+    min-width: 184px;
+}
 
+.nav-account .nav-link {
+    width: fit-content;
+    color: #323234;
+    padding: 2px;
+}
+
+.nav-account .nav-link.logout {
+    width: fit-content;
+    color: #323234;
+    padding: 2px;
+}
+
+.nav-account .nav-link.active {
+    background-color: transparent;
+    color: var(--color-primary);
+}
+
+.account-wrapper .tab-content .tab-pane {
+    background-color: var(--color-white);
+    border-radius: 20px;
+    padding: 44px;
+    width: 100%;
+}
+
+.order-card {
+    border-radius: 20px;
+    gap: 0;
+    display: flex; 
+    flex-direction: column;
+}
+.order-head {
+    padding: 10px 26px 8px;
+    background-color: #F3F3F3;
+    border-radius: 20px 20px 0 0;
+}
+.order-products {
+    border: 1px solid #DBDBDB;
+    border-top: none;
+    border-radius: 0 0 20px 20px;
+    padding: 20px;
+}
 
 
 @media (max-width: 1399.98px) { 

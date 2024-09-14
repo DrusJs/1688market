@@ -14,7 +14,7 @@
 
     <title>1688</title>
 </head>
-<body>
+<body class="bg-gray">
     <div class="mobile-nav d-lg-none d-flex align-items-center justify-content-center">
         <a href="/" class="btn mobile-nav-link">
             <img src="img/mobile-home.svg" alt="">
@@ -141,8 +141,8 @@
         </header>
         <main class="main flex-grow-1">
             <div class="container">
-                <div class="account-wrapper">
-                    <div class="nav flex-column nav-pills nav-size" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <div class="account-wrapper d-flex align-items-start gap-4 mt-5">
+                    <div class="nav flex-column nav-pills nav-account gap-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 
                         <button class="nav-link active" id="v-pills-delivery-tab" data-bs-toggle="pill" data-bs-target="#v-pills-delivery" type="button" role="tab" aria-controls="v-pills-delivery" aria-selected="true">Доставка</button>
 
@@ -152,20 +152,248 @@
 
                         <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Профиль</button>
 
-                        <button class="nav-link">Выход</button>
+                        <button class="nav-link logout">Выход</button>
                       </div>
-                      <div class="tab-content" id="v-pills-tabContent">
+                      <div class="tab-content w-100" id="v-pills-tabContent">
                         <div class="tab-pane fade show active" id="v-pills-delivery" role="tabpanel" aria-labelledby="v-pills-delivery-tab" tabindex="0">
-
+                            <div class="d-flex flex-column gap-2">
+                                <h2 class="title mb-3">Данные</h2>
+                                <h4 class="title">Кузнецов Илья Дмитриевич</h4>
+                                <p class="text-lg fw-medium">+7 926 123 21 32</p>
+                                <p class="text-lg">Россия, Москва, Московская область,<br> Пушкина, 22, 6, 110000</p>
+                                <button class="btn btn-blue w-fit p-0">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 16.6667H17.5M13.75 2.91669C14.0815 2.58517 14.5312 2.39893 15 2.39893C15.2321 2.39893 15.462 2.44465 15.6765 2.53349C15.891 2.62233 16.0858 2.75254 16.25 2.91669C16.4142 3.08085 16.5444 3.27572 16.6332 3.4902C16.722 3.70467 16.7678 3.93455 16.7678 4.16669C16.7678 4.39884 16.722 4.62871 16.6332 4.84319C16.5444 5.05766 16.4142 5.25254 16.25 5.41669L5.83333 15.8334L2.5 16.6667L3.33333 13.3334L13.75 2.91669Z" stroke="#547DFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                        
+                                    <span class="ms-2">Редактировать данные</span>
+                                </button>
+                            </div>
                         </div>
                         <div class="tab-pane fade" id="v-pills-orders" role="tabpanel" aria-labelledby="v-pills-orders-tab" tabindex="0">
+                            <div class="d-flex flex-column gap-2">
+                                <h2 class="title">Активные заказы<span class="c-gray ps-3">1</span></h2>
+                                <div class="dropdown js-active-items mb-4">
+                                    <button class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Все
+                                    </button>
+                                  
+                                    <ul class="dropdown-menu">
+                                      <li><a class="dropdown-item active" href="#">Все</a></li>
+                                      <li><a class="dropdown-item" href="#">Ожидают оплаты</a></li>
+                                      <li><a class="dropdown-item" href="#">Доставленные</a></li>
+                                    </ul>
+                                </div>
 
+                                <div class="order-card">
+                                    <div class="order-head d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center gap-4">
+                                            <div class="d-flex flex-column">
+                                                <h4 class="title c-text">30 августа <span class="text">2024</span></h4>
+                                                <p class="text c-text">RUNK-44</p>
+                                            </div>
+                                            <div class="status success">Доставлен</div>
+                                            <button class="btn p-0">
+                                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M26.25 14.375C26.2543 16.0249 25.8688 17.6524 25.125 19.125C24.243 20.8897 22.8872 22.374 21.2093 23.4116C19.5314 24.4493 17.5978 24.9993 15.625 25C13.9752 25.0043 12.3476 24.6189 10.875 23.875L3.75 26.25L6.125 19.125C5.38116 17.6524 4.9957 16.0249 5 14.375C5.00076 12.4022 5.55076 10.4686 6.5884 8.79072C7.62603 7.11285 9.11032 5.75699 10.875 4.87504C12.3476 4.1312 13.9752 3.74573 15.625 3.75004H16.25C18.8554 3.89378 21.3163 4.99349 23.1614 6.83861C25.0065 8.68373 26.1063 11.1446 26.25 13.75V14.375Z" fill="#F46F4E"/>
+                                                </svg>                                                    
+                                            </button>
+                                        </div>
+                                        <h4 class="title c-text">18 016.42 ₽</h4>
+                                    </div>
+                                    <div class="order-products">
+                                        <div class="d-flex gap-3">
+                                            <div class="order-item position-relative">
+                                                <img src="img/order-item.png" alt="product">
+                                                <p class="order-item-counter position-absolute">20</p>
+                                            </div>
+                                            <div class="order-item position-relative">
+                                                <img src="img/order-item.png" alt="product">
+                                                <p class="order-item-counter position-absolute">5</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="order-card">
+                                    <div class="order-head d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center gap-4">
+                                            <div class="d-flex flex-column">
+                                                <h4 class="title c-text">30 августа <span class="text">2024</span></h4>
+                                                <p class="text c-text">RUNK-44</p>
+                                            </div>
+                                            <div class="status await">Ожидает оплаты</div>
+                                            <button class="btn p-0">
+                                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M26.25 14.375C26.2543 16.0249 25.8688 17.6524 25.125 19.125C24.243 20.8897 22.8872 22.374 21.2093 23.4116C19.5314 24.4493 17.5978 24.9993 15.625 25C13.9752 25.0043 12.3476 24.6189 10.875 23.875L3.75 26.25L6.125 19.125C5.38116 17.6524 4.9957 16.0249 5 14.375C5.00076 12.4022 5.55076 10.4686 6.5884 8.79072C7.62603 7.11285 9.11032 5.75699 10.875 4.87504C12.3476 4.1312 13.9752 3.74573 15.625 3.75004H16.25C18.8554 3.89378 21.3163 4.99349 23.1614 6.83861C25.0065 8.68373 26.1063 11.1446 26.25 13.75V14.375Z" fill="#F46F4E"/>
+                                                </svg>                                                    
+                                            </button>
+                                        </div>
+                                        <h4 class="title c-text">18 016.42 ₽</h4>
+                                    </div>
+                                    <div class="order-products">
+                                        <div class="d-flex gap-3">
+                                            <div class="order-item position-relative">
+                                                <img src="img/order-item.png" alt="product">
+                                                <p class="order-item-counter position-absolute">40</p>
+                                            </div>
+                                            <div class="order-item position-relative">
+                                                <img src="img/order-item.png" alt="product">
+                                                <p class="order-item-counter position-absolute">40</p>
+                                            </div>
+                                            <div class="order-item position-relative">
+                                                <img src="img/order-item.png" alt="product">
+                                                <p class="order-item-counter position-absolute">40</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="order-card">
+                                    <div class="order-head d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center gap-4">
+                                            <div class="d-flex flex-column">
+                                                <h4 class="title c-text">30 августа <span class="text">2024</span></h4>
+                                                <p class="text c-text">RUNK-44</p>
+                                            </div>
+                                            <div class="status refuse">Отменен</div>
+                                            <button class="btn p-0">
+                                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M26.25 14.375C26.2543 16.0249 25.8688 17.6524 25.125 19.125C24.243 20.8897 22.8872 22.374 21.2093 23.4116C19.5314 24.4493 17.5978 24.9993 15.625 25C13.9752 25.0043 12.3476 24.6189 10.875 23.875L3.75 26.25L6.125 19.125C5.38116 17.6524 4.9957 16.0249 5 14.375C5.00076 12.4022 5.55076 10.4686 6.5884 8.79072C7.62603 7.11285 9.11032 5.75699 10.875 4.87504C12.3476 4.1312 13.9752 3.74573 15.625 3.75004H16.25C18.8554 3.89378 21.3163 4.99349 23.1614 6.83861C25.0065 8.68373 26.1063 11.1446 26.25 13.75V14.375Z" fill="#F46F4E"/>
+                                                </svg>                                                    
+                                            </button>
+                                        </div>
+                                        <h4 class="title c-text">18 016.42 ₽</h4>
+                                    </div>
+                                    <div class="order-products">
+                                        <div class="d-flex gap-3">
+                                            <div class="order-item position-relative">
+                                                <img src="img/order-item.png" alt="product">
+                                                <p class="order-item-counter position-absolute">20</p>
+                                            </div>
+                                            <div class="order-item position-relative">
+                                                <img src="img/order-item.png" alt="product">
+                                                <p class="order-item-counter position-absolute">5</p>
+                                            </div>
+                                            <div class="order-item position-relative">
+                                                <img src="img/order-item.png" alt="product">
+                                                <p class="order-item-counter position-absolute">5</p>
+                                            </div>
+                                            <div class="order-item position-relative">
+                                                <img src="img/order-item.png" alt="product">
+                                                <p class="order-item-counter position-absolute">5</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="show-more w-100 mt-4">
+                                    Показать ещё
+                                </button>
+                                <div class="pagination mt-4">                    
+                                    <div class="pagination-item prev d-none">Назад</div>
+                                    <div class="pagination-item active">1</div>
+                                    <div class="pagination-item">2</div>
+                                    <div class="pagination-item">3</div>
+                                    <div class="pagination-item">4</div>
+                                    <div class="pagination-item">5</div>
+                                    <div class="pagination-item">6</div>
+                                    <div class="pagination-item">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="#0E0E10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M19 13C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11C18.4477 11 18 11.4477 18 12C18 12.5523 18.4477 13 19 13Z" stroke="#0E0E10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M5 13C5.55228 13 6 12.5523 6 12C6 11.4477 5.55228 11 5 11C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13Z" stroke="#0E0E10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>                            
+                                    </div>
+                                    <div class="pagination-item">33</div>
+                                    <div class="pagination-item next">Дальше</div>
+                                </div>
+                            </div>
                         </div>
                         <div class="tab-pane fade" id="v-pills-wallet" role="tabpanel" aria-labelledby="v-pills-wallet-tab" tabindex="0">
-
+                            <div class="d-flex flex-column gap-2">
+                                <div class="d-flex align-items-end gap-4">
+                                    <h2 class="title m-0">Счет</h2>
+                                    <p class="text-title c-gray m-0">Номер счета: <span>13</span></p>
+                                </div>
+                                <button class="btn btn-primary btn-acc-wallet btn-lg mt-2 fw-semibold d-flex justify-content-between">
+                                    Сумма
+                                    <span><b>22 605</b> ₽</span>
+                                </button>
+                                <table class="account-wallet mt-4">
+                                    <tr>
+                                        <th>Дата</th>
+                                        <th>Комментарии</th>
+                                        <th>Сумма</th>
+                                    </tr>
+                                    <tr>
+                                        <td>2024-06-26 13:20:07</td>
+                                        <td>Оплата заказа RUNK-20</td>
+                                        <td>9 545.14 ₽</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2024-06-21 12:38:17</td>
+                                        <td>Возврат средств из-за изменения цены товара RUNK-42</td>
+                                        <td>9 545.14 ₽</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2024-06-20 18:21:46</td>
+                                        <td>Возврат средств из-за изменения количества товара RUNK-42</td>
+                                        <td>744.48 ₽</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2024-06-20 18:18:35</td>
+                                        <td>Возврат средств из-за изменения количества товара RUNK-42</td>
+                                        <td>7 444.80 ₽</td>
+                                    </tr>
+                                </table>
+                            </div>
                         </div>
                         <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
+                            <div class="profile-tab d-flex flex-column gap-2">
+                                <h2 class="title mb-3">Учётные данные</h2>
+                                <h4 class="title">Кузнецов Илья Дмитриевич</h4>
+                                
+                                <div class="d-flex gap-5">
+                                    <div class="d-flex flex-column align-items-start">
+                                        <p class="text-sm c-gray mb-1">Телефон</p>
+                                        <p class="text-lg fw-medium mb-2">+7 926 123 21 32</p>
+                                        <button class="btn btn-blue p-0 w-fit text-lt">Изменить</button>
+                                    </div>
+                                    <div class="d-flex flex-column align-items-start">
+                                        <p class="text-sm c-gray mb-1">Email</p>
+                                        <p class="text-lg fw-medium mb-2">Kyz@mail.ru</p>
+                                        <button class="btn btn-blue p-0 w-fit text-lt">Изменить</button>
+                                    </div>
+                                </div>
 
+                                <button class="btn btn-blue w-fit p-0 mt-3">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 16.6667H17.5M13.75 2.91669C14.0815 2.58517 14.5312 2.39893 15 2.39893C15.2321 2.39893 15.462 2.44465 15.6765 2.53349C15.891 2.62233 16.0858 2.75254 16.25 2.91669C16.4142 3.08085 16.5444 3.27572 16.6332 3.4902C16.722 3.70467 16.7678 3.93455 16.7678 4.16669C16.7678 4.39884 16.722 4.62871 16.6332 4.84319C16.5444 5.05766 16.4142 5.25254 16.25 5.41669L5.83333 15.8334L2.5 16.6667L3.33333 13.3334L13.75 2.91669Z" stroke="#547DFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                        
+                                    <span class="ms-2">Редактировать профиль</span>
+                                </button>
+
+                                <div class="separator my-3"></div>
+                                
+                                <p class="text-title fw-medium">Паспортные данные / другие данные</p>
+                                <p class="text-sm c-gray">Ваши данные в безопасности — 1688 хранит их в защищённом виде</p>
+                                <button class="btn btn-blue p-0 w-fit text-lt">Указать данные</button>
+                                
+                                <div class="separator my-3"></div>
+
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="text-title fw-medium">Управление аккаунтом</p>
+                                    <button class="btn p-0">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11 12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12Z" stroke="#B7B7B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18C11.4477 18 11 18.4477 11 19Z" stroke="#B7B7B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M11 5C11 5.55228 11.4477 6 12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5Z" stroke="#B7B7B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>                                            
+                                    </button>
+                                </div>
+                                <p class="text-sm c-gray">Вы с нами с 3 сентября 2024 года</p>
+                                <button class="btn btn-red p-0 w-fit">Выйти из аккаунта</button>
+                            </div>
                         </div>
                       </div>
                 </div>

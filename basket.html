@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="1688">
+    <meta property="og:description" content="1688">
+    <meta property="og:image" content="img/1688-logo.svg">
+    <meta property="twitter:image" content="img/1688-logo.svg">
+    <meta name="description" content="1688">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>1688</title>
+</head>
+<body>
+    <div class="mobile-nav d-lg-none d-flex align-items-center justify-content-center">
+        <a href="/" class="btn mobile-nav-link">
+            <img src="img/mobile-home.svg" alt="">
+        </a>
+        <a href="/catalog.html" class="btn mobile-nav-link">
+            <img src="img/mobile-menu.svg" alt="">
+        </a>
+        <a href="/basket.html" class="btn mobile-nav-link">
+            <img src="img/mobile-cart.svg" alt="">
+        </a>
+        <a href="/favorites.html" class="btn mobile-nav-link">
+            <img src="img/mobile-heart.svg" alt="">
+        </a>
+        <a href="/account.html" class="btn mobile-nav-link">
+            <img src="img/mobile-package.svg" alt="">
+        </a>
+    </div>
+    
+    <div class="wrapper d-flex flex-column">
+        <header class="header">
+            <div class="container">
+                <div class="header-inner d-flex flex-lg-row flex-row-reverse align-items-center gap-xl-4 gap-3">
+                    <a href="/" class="me-3 d-lg-block d-none">
+                        <img src="img/1688.svg" alt="1688 logo">
+                    </a>
+                    <button class="catalog-button">
+                        <span class="inner-text d-md-block d-none">Каталог</span>
+                        <img src="img/menu-2.svg" alt="burger-menu" class="d-md-none d-block">
+                    </button>
+                    <div class="search-wrapper position-relative">
+                        <button class="btn search-button position-absolute">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0820312 9.8335C0.0820312 4.44872 4.44726 0.0834961 9.83203 0.0834961C15.2168 0.0834961 19.582 4.44872 19.582 9.8335C19.582 12.1356 18.7842 14.2513 17.4499 15.9193L24.3641 22.8335L22.832 24.3656L15.9179 17.4514C14.2499 18.7857 12.1341 19.5835 9.83203 19.5835C4.44726 19.5835 0.0820312 15.2183 0.0820312 9.8335ZM9.83203 2.25016C5.64387 2.25016 2.2487 5.64534 2.2487 9.8335C2.2487 14.0217 5.64387 17.4168 9.83203 17.4168C14.0202 17.4168 17.4154 14.0217 17.4154 9.8335C17.4154 5.64534 14.0202 2.25016 9.83203 2.25016Z" fill="#F46F4E"/>
+                            </svg>                            
+                        </button>
+                        <input type="text" name="search-input" id="search-input" class="search-input" placeholder="Найти товары">
+                        <input type="file" name="search-file" id="search-file" class="d-none">
+                        <label for="search-file" class="search-file-button position-absolute">
+                            <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24.9154 18.5833C24.9154 19.158 24.6871 19.7091 24.2808 20.1154C23.8744 20.5217 23.3233 20.75 22.7487 20.75H3.2487C2.67406 20.75 2.12296 20.5217 1.71663 20.1154C1.3103 19.7091 1.08203 19.158 1.08203 18.5833V6.66667C1.08203 6.09203 1.3103 5.54093 1.71663 5.1346C2.12296 4.72827 2.67406 4.5 3.2487 4.5H7.58203L9.7487 1.25H16.2487L18.4154 4.5H22.7487C23.3233 4.5 23.8744 4.72827 24.2808 5.1346C24.6871 5.54093 24.9154 6.09203 24.9154 6.66667V18.5833Z" stroke="#F46F4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12.9987 16.4167C15.3919 16.4167 17.332 14.4766 17.332 12.0833C17.332 9.6901 15.3919 7.75 12.9987 7.75C10.6055 7.75 8.66536 9.6901 8.66536 12.0833C8.66536 14.4766 10.6055 16.4167 12.9987 16.4167Z" stroke="#F46F4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </label>
+                        <div class="search-result position-absolute">
+                            <a href="#" class="search-link">Женщинам</a>
+                            <a href="#" class="search-link">Детям</a>
+                            <a href="#" class="search-link">Все для дома</a>
+                            <a href="#" class="search-link">Аксессуары</a>
+                            <a href="#" class="search-link">Игрушки</a>
+                        </div>
+                    </div>
+                    <nav class="d-lg-block d-none">
+                        <div class="d-flex align-items-center">
+                            <a href="order.html" class="btn d-flex flex-column align-items-center gap-1">
+                                <img src="img/package.svg" alt="Заказы" width="30" height="30">
+                                <span class="menu-link">Заказы</span>
+                            </a>
+                            <a href="order.html" class="btn d-flex flex-column align-items-center gap-1">
+                                <img src="img/heart.svg" alt="Избранное" width="30" height="30">
+                                <span class="menu-link">Избранное</span>
+                            </a>
+                            <a href="order.html" class="btn d-flex flex-column align-items-center gap-1">
+                                <img src="img/subtract.svg" alt="Профиль" width="30" height="30">
+                                <span class="menu-link">Войти</span>
+                            </a>
+                            <a href="order.html" class="btn d-flex flex-column align-items-center gap-1">
+                                <img src="img/shopping-cart.svg" alt="Корзина" width="30" height="30">
+                                <span class="menu-link">Корзина</span>
+                            </a>
+                        </div>
+    
+                    </nav>
+                </div>
+                <div class="catalog-wrapper">
+                    <div class="catalog-list">
+                        <div class="catalog-item">Женщинам</div>
+                        <div class="catalog-item">Детям</div>
+                        <div class="catalog-item">Обувь</div>
+                        <div class="catalog-item">Мужчинам</div>
+                        <div class="catalog-item">Все для дома</div>
+                        <div class="catalog-item">Косметика</div>
+                        <div class="catalog-item">Нижнее белье</div>
+                        <div class="catalog-item">Спортивные товары</div>
+                        <div class="catalog-item">Товары для авто</div>
+                        <div class="catalog-item">Аксессуары</div>
+                        <div class="catalog-item">Хобби</div>
+                    </div>
+                    <div class="catalog-sublist">
+                        <h3 class="catalog-title">Детям</h3>
+                        <div class="catalog-scroll">
+                            <div class="catalog-item">Подарочные комплекты одежды для малышей</div>
+                            <div class="catalog-item">Детские рубашки</div>
+                            <div class="catalog-item">Детские леггинсы</div>
+                            <div class="catalog-item">Детские футболки</div>
+                            <div class="catalog-item">Ребенок ковбой Одежда</div>
+                            <div class="catalog-item">Детские брюки и штаны</div>
+                            <div class="catalog-item">Детские жилеты</div>
+                            <div class="catalog-item">Детская одежда, сделанная на заказ</div>
+                            <div class="catalog-item">Одежда для танцев, выступлений и фотосессий</div>
+                            <div class="catalog-item">Тонкие кофты и водолазки</div>
+                            <div class="catalog-item">Детские худи, толстовки и свитера их хлопка</div>                        
+                            <div class="catalog-item">Детские свитера</div>
+                            <div class="catalog-item">Детские костюмы: спортивные, праздничные, школьные, домашние и другие</div>
+                            <div class="catalog-item">Школьная и спортивная форма</div>
+                            <div class="catalog-item">Комбинезоны, утепленные ползунки и боди</div>
+                            <div class="catalog-item">Одежда для родителей и ребенка</div>
+                            <div class="catalog-item">Детские носки и гольфы</div>
+                            <div class="catalog-item">Детские куртки с хлопковым наполнителем</div>
+                            <div class="catalog-item">Детская обувь</div>
+                        </div>
+                    </div>
+                    <div class="catalog-sublist-child">
+                        <h3 class="catalog-title">Ребенок ковбой Одежда</h3>
+                        <div class="catalog-scroll">
+                            <a href="product-card.html" class="catalog-item">Детские джинсы</a>
+                            <a href="product-card.html" class="catalog-item">Детская джинсовая куртка</a>
+                            <a href="product-card.html" class="catalog-item">Детская джинсовая юбка</a>
+                            <a href="product-card.html" class="catalog-item">Детская рубашка</a>
+                            <a href="product-card.html" class="catalog-item">Детская джинсовая одежда</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main flex-grow-1">
+            <div class="container">
+                <h1 class="title mt-5">Корзина</h1>
+                <div class="d-flex basket-wrapper justify-content-between">
+                    <div class="basket-products"></div>
+                    <div class="basket-main d-flex flex-column">
+                        <div class="d-flex justify-content-between gap-3">
+                            <p class="text fw-medium">2 товара, 25 шт.</p>
+                            <p class="text-title fw-medium">25 436 ₽</p>
+                        </div>
+                        <div class="d-flex justify-content-between gap-3">
+                            <p class="text-title">Скидки</p>
+                            <p class="text-title">-3 200 ₽</p>
+                        </div>
+                        <div class="d-flex justify-content-between gap-3">
+                            <p class="text-title">Доставка</p>
+                            <p class="text-title">+369 ₽</p>
+                        </div>
+                        <div class="d-flex justify-content-between gap-3">
+                            <p class="text-title">Общий вес</p>
+                            <p class="text-title">2 кг</p>
+                        </div>
+                        <button class="btn btn-primary btn-lg mt-2 w-100 fw-semibold d-flex justify-content-between">
+                            Оформить
+                            <span><b>22 605</b> ₽</span>
+                        </button>
+                        <p class="text-lt">Я принимаю <a class="link-primary fw-semibold" href="#">условия пользовательского соглашения</a></p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-inner d-flex flex-column gap-4 align-items-center w-100 pt-4 mt-footer">
+                    <div class="d-flex flex-wrap gap-sm-5 gap-3">
+                        <ul class="footer-list d-flex flex-column gap-3">
+                            <li class="footer-list__item">
+                                Помощь
+                            </li>
+                            <li class="footer-list__item">
+                                <a href="#">Как заказать</a>
+                            </li>
+                            <li class="footer-list__item">
+                                <a href="#">Оплата и доставка</a>
+                            </li>
+                            <li class="footer-list__item">
+                                <a href="#">Гарантии</a>
+                            </li>
+                            <li class="footer-list__item">
+                                <a href="#">Гид по размерам</a>
+                            </li>
+                            <li class="footer-list__item">
+                                <a href="#">Поиск товара</a>
+                            </li>
+                            <li class="footer-list__item">
+                                <a href="#">Регистрация</a>
+                            </li>
+                        </ul>
+                        <ul class="footer-list d-flex flex-column gap-3">
+                            <li class="footer-list__item">
+                                О компании
+                            </li>
+                            <li class="footer-list__item">
+                                <a href="#">О сервисе</a>
+                            </li>
+                            <li class="footer-list__item">
+                                <a href="#">Пользовательское соглашение</a>
+                            </li>
+                            </li>
+                        </ul>
+                        <ul class="footer-list d-flex flex-column gap-3">
+                            <li class="footer-list__item">
+                                Контакты
+                            </li>
+                            <li class="footer-list__item">
+                                <a href="tel:+77758225448">+7 775 822 54 48</a>
+                            </li>
+                            <li class="footer-list__item">
+                                <a href="mailto:admin@1688.ru">admin@1688.ru</a>
+                            </li>
+                            </li>
+                        </ul>
+                    </div>
+                    <img src="img/iomoney.png" alt="Юmoney" width="181" height="40">
+                    <p class="text-secondary px-4 text-center">Все права сохранены и защищены © 2017 - 2024 1688.ru</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="modal-wrapper" id="preview-modal">
+    </div>
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

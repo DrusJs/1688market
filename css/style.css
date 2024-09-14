@@ -39,6 +39,10 @@ body {
     color: var(--color-black-primary);
 }
 
+b, strong {
+    font-weight: 700;
+}
+
 .wrapper {
     min-height: 100dvh;
 }
@@ -78,6 +82,10 @@ h4.title {
 p.text {
     line-height: 160%;
 }
+
+p.text-lg {
+    font-size: 20px;
+}
 p.text-title {
     font-size: 18px;
 }
@@ -91,9 +99,34 @@ p.text-lt {
 .fw-medium {
     font-weight: 500;
 }
+.fw-semibold {
+    font-weight: 600;
+}
+
+.btn.btn-lg {
+    font-size: 18px;
+    padding: 14px 30px;
+}
+
+.w-fit {
+    width: fit-content;
+}
+
+.btn.btn-blue {
+    color: var(--color-blue);
+}
 
 .c-gray {
     color: var(--color-grey);
+}
+
+.c-red {
+    color: #F63F3F;
+}
+
+a.link-primary,
+a.link-primary:visited {
+    color: var(--color-primary) !important;
 }
 
 h1.title .c-gray {
@@ -727,6 +760,57 @@ h1.title .c-gray {
     left: 160px;
 }
 
+.basket-main-col {
+    width: 100%;
+    max-width: 475px;
+}
+
+.basket-main {
+    gap: 10px;
+    padding: 35px 40px;
+    border: 2px solid var(--color-green);
+    border-radius: 30px;
+    width: 100%;
+    max-width: 475px;
+}
+
+.basket-main p {
+    margin-bottom: 0;
+}
+
+.basket-main.empty {
+    border: 2px solid #CFCFCF;
+}
+
+.order-wrapper .basket-main.empty {
+    padding-bottom: 22px;
+}
+
+.auth-btn {
+    border: 2px solid #CFCFCF;
+    color: var(--color-blue);
+}
+
+.btn.btn-primary {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    border-color: transparent;
+}
+
+.order-item-counter {
+    top: 0;
+    right: 0;
+    background-color: var(--color-black-primary);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-white);
+    padding: 2px 4px;
+    border-radius: 5px;
+    min-width: 18px;
+    text-align: center;
+}
+
+
 
 
 @media (max-width: 1399.98px) { 
@@ -747,6 +831,12 @@ h1.title .c-gray {
     body {
         background-color: #F6F6FA;
     }
+    .container {
+        padding: 0 15px;
+    }
+    .footer-inner.mt-footer {
+        margin-top: 40px;
+    }
     .catalog-button {
         padding: 11px 26px 11px;
         height: 50px;
@@ -757,6 +847,18 @@ h1.title .c-gray {
         padding: 10px 66px 12px;
         font-size: 24px;
         line-height: 1;
+    }
+    .order-wrapper .basket-main {
+        max-width: none;
+        background-color: var(--color-white);
+    }
+
+    .order-info {
+        background-color: var(--color-white);
+        border-radius: 15px;
+        padding: 15px;
+        width: 100vw !important;
+        margin-left: -16px;
     }
 
     .catalog-item::after {
@@ -865,6 +967,18 @@ h1.title .c-gray {
     }
     .fav-btn:hover .fav-hover-stroke {
         stroke: var(--color-primary);
+    }
+
+    .btn.auth-btn:hover,
+    .btn.auth-btn:active {
+        border: 2px solid var(--color-blue);
+        color: var(--color-blue);
+    }
+    a.link-primary:hover {
+        color: var(--color-primary) !important;
+    }
+    .btn.btn-blue:active {
+        color: var(--color-blue);
     }
 }
 

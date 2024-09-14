@@ -142,15 +142,26 @@
         <main class="main flex-grow-1">
             <div class="container">
                 <h1 class="title mt-5">Оформление заказа</h1>
-                <div class="d-flex order-wrapper justify-content-between mt-lg-5 mt-3">
-                    <div class="order-info d-flex flex-column gap-3">
-                        <h4 class="title mb-0">Доставка</h4>
-                        <div class="d-flex align-items-center gap-3">
-                            <img src="img/map-pin.svg" alt="Pin">
-                            <p class="text-title mb-0">Адрес доставки не указан</p>
+                <div class="d-flex order-wrapper flex-lg-row flex-column gap-4 align-items-start justify-content-between mt-lg-5 mt-3">
+                    <div class="order-info d-flex flex-lg-column flex-row flex-wrap gap-5 justify-content-between w-lg-auto w-100">
+                        <div class="d-flex flex-column gap-3">
+                            <h4 class="title mb-0">Доставка</h4>
+                            <div class="d-flex align-items-center gap-3">
+                                <img src="img/map-pin.svg" alt="Pin">
+                                <p class="text-title mb-0">Адрес доставки</p>
+                            </div>
+                            <div class="d-flex align-items-center gap-3">
+                                <p class="text-title c-gray mb-0">ФИО</p>
+                                <p class="text-title c-gray mb-0">+7 775 822 54 48</p>
+                            </div>
+                            <button class="btn p-0 d-flex align-items-center gap-3">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 16.6667H17.5M13.75 2.91669C14.0815 2.58517 14.5312 2.39893 15 2.39893C15.2321 2.39893 15.462 2.44465 15.6765 2.53349C15.891 2.62233 16.0858 2.75254 16.25 2.91669C16.4142 3.08085 16.5444 3.27572 16.6332 3.4902C16.722 3.70467 16.7678 3.93455 16.7678 4.16669C16.7678 4.39884 16.722 4.62871 16.6332 4.84319C16.5444 5.05766 16.4142 5.25254 16.25 5.41669L5.83333 15.8334L2.5 16.6667L3.33333 13.3334L13.75 2.91669Z" stroke="#575758" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                
+                                <span class="c-gray">Редактировать профиль</span>
+                            </button>
                         </div>
-                        <button class="btn btn-blue p-0 w-fit">Указать адрес</button>
-                        <div class="d-flex gap-2 mt-4">
+                        <div class="d-flex gap-2 mt-lg-4">
                             <div class="order-item position-relative">
                                 <img src="img/order-item.png" alt="product">
                                 <p class="order-item-counter position-absolute">20</p>
@@ -161,7 +172,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="basket-main empty d-flex flex-column">
+                    <div class="basket-main d-flex flex-column">
                         <div class="d-flex justify-content-between gap-3">
                             <p class="text fw-medium">2 товара, 25 шт.</p>
                             <p class="text-title fw-medium">25 436 ₽</p>
@@ -178,13 +189,11 @@
                             <p class="text-title">Общий вес</p>
                             <p class="text-title">2 кг</p>
                         </div>
-                        <button class="btn btn-secondary disabled btn-lg mt-2 w-100 fw-semibold d-flex justify-content-between">
+                        <button class="btn btn-primary btn-lg mt-2 w-100 fw-semibold d-flex justify-content-between">
                             Оформить
                             <span><b>22 605</b> ₽</span>
                         </button>
                         <p class="text-lt">Я принимаю <a class="link-primary fw-semibold" href="#">условия пользовательского соглашения</a></p>
-                        <p class="text fw-semibold c-red text-center mt-2">Укажите адрес доставки</p>
-                    </div>
                 </div>
 
             </div>

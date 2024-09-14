@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function hideCheckedProducts() {
-        const allChecked = Array.from(checkItems).filter(item => item.checked);
+        const allChecked = Array.from(checkItems).filter(item =>item.checked && !(item.closest('.basket-product-card').classList.contains('remove')));
 
         allChecked.forEach(el=>{
             let item = el.closest('.basket-product-card')

@@ -142,8 +142,101 @@
         <main class="main flex-grow-1">
             <div class="container">
                 <h1 class="title mt-5">Корзина</h1>
-                <div class="d-flex basket-wrapper justify-content-between">
-                    <div class="basket-products"></div>
+                <div class="basket-wrapper d-flex justify-content-between align-items-start mt-5">
+                    <div class="basket-products d-flex flex-column">
+                        <div class="d-flex align-items-center">
+                            <input type="checkbox" name="basket-check-all" id="basket-check-all" class="d-none check-all">
+                            <label for="basket-check-all"></label>
+                            <p class="basket-check-counter text-title c-gray mb-0 me-4">
+                                Выбрано <span class="cnt-now">0</span> из <span class="cnt-total">2</span>
+                            </p>
+                            <button class="btn px-0 py-2">Удалить</button>
+                        </div>
+                        <div class="basket-product-card d-flex">
+                            <input type="checkbox" name="basket-check-product1" id="basket-check-product1" class="d-none check-item">
+                            <label for="basket-check-product1"></label>
+                            <div class="d-flex">
+                                <div class="d-flex flex-column">
+                                    <div class="product-image">
+                                        <img src="img/order-item.png" alt="">
+                                    </div>
+                                    <button class="btn btn-blue d-flex gap-2 text-start p-0">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M21 11.5C21.0034 12.8199 20.6951 14.1219 20.1 15.3C19.3944 16.7118 18.3098 17.8992 16.9674 18.7293C15.6251 19.5594 14.0782 19.9994 12.5 20C11.1801 20.0035 9.87812 19.6951 8.7 19.1L3 21L4.9 15.3C4.30493 14.1219 3.99656 12.8199 4 11.5C4.00061 9.92179 4.44061 8.37488 5.27072 7.03258C6.10083 5.69028 7.28825 4.6056 8.7 3.90003C9.87812 3.30496 11.1801 2.99659 12.5 3.00003H13C15.0843 3.11502 17.053 3.99479 18.5291 5.47089C20.0052 6.94699 20.885 8.91568 21 11V11.5Z" stroke="#547DFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span>Комментарий<br> к товару</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info d-flex flex-column gap-1 ms-4">
+                                <p class="text-sm c-gray m-0">Футболка детская с принтом герои мультфильма Король лев, цвет серый/DSY00188-P1, размер 24 м</p>
+                                <p class="text-lt c-gray m-0">Продавец <span class="text c-text fw-medium ps-1">SHOP</span></p>
+                                <p class="text-lt c-gray m-0">Общий вес <span class="text c-text fw-medium ps-1">0 кг</span></p>
+                                <p class="text-lt c-gray m-0">Сервисный сбор 10% <span class="text c-text fw-medium ps-1">7.20 ₽</span></p>
+                                <p class="text-lt c-gray m-0">Доставка по Китаю <span class="text c-text fw-medium ps-1">604.80 ₽</span></p>
+                                <div class="d-flex align-items-center gap-4 mt-2">
+                                    <div class="d-flex flex-column">
+                                        <div class="product-price active d-flex align-items-center">
+                                            <p class="price">261 ₽</p>
+                                            <p class="subprice">520 ₽</p>
+                                            <p class="discount">-42%</p>
+                                            <p class="product-cnt text-lt c-gray">За 1 шт.</p>
+                                        </div>
+                                        <p class="text-lt c-green m-0">10 товаров до уменьшения цены</p>
+                                    </div>
+                                    <div class="counter">
+                                        <button class="btn cnt-minus"></button>
+                                        <div class="counter-value">5</div>
+                                        <button class="btn cnt-plus"></button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <p class="text-lg text-nowrap align-self-center ms-4"><b>520 ₽</b></p>
+                        </div>
+                        <div class="basket-product-card d-flex">
+                            <input type="checkbox" name="basket-check-product2" id="basket-check-product2" class="d-none check-item">
+                            <label for="basket-check-product2"></label>
+                            <div class="d-flex">
+                                <div class="d-flex flex-column">
+                                    <div class="product-image">
+                                        <img src="img/order-item.png" alt="">
+                                    </div>
+                                    <button class="btn btn-blue d-flex gap-2 text-start p-0">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M21 11.5C21.0034 12.8199 20.6951 14.1219 20.1 15.3C19.3944 16.7118 18.3098 17.8992 16.9674 18.7293C15.6251 19.5594 14.0782 19.9994 12.5 20C11.1801 20.0035 9.87812 19.6951 8.7 19.1L3 21L4.9 15.3C4.30493 14.1219 3.99656 12.8199 4 11.5C4.00061 9.92179 4.44061 8.37488 5.27072 7.03258C6.10083 5.69028 7.28825 4.6056 8.7 3.90003C9.87812 3.30496 11.1801 2.99659 12.5 3.00003H13C15.0843 3.11502 17.053 3.99479 18.5291 5.47089C20.0052 6.94699 20.885 8.91568 21 11V11.5Z" stroke="#547DFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span>Комментарий<br> к товару</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info d-flex flex-column gap-1 ms-4">
+                                <p class="text-sm c-gray m-0">Футболка детская с принтом герои мультфильма Король лев, цвет серый/DSY00188-P1, размер 24 м</p>
+                                <p class="text-lt c-gray m-0">Продавец <span class="text c-text fw-medium ps-1">SHOP</span></p>
+                                <p class="text-lt c-gray m-0">Общий вес <span class="text c-text fw-medium ps-1">0 кг</span></p>
+                                <p class="text-lt c-gray m-0">Сервисный сбор 10% <span class="text c-text fw-medium ps-1">7.20 ₽</span></p>
+                                <p class="text-lt c-gray m-0">Доставка по Китаю <span class="text c-text fw-medium ps-1">604.80 ₽</span></p>
+                                <div class="d-flex align-items-center gap-4 mt-2">
+                                    <div class="d-flex flex-column">
+                                        <div class="product-price active d-flex align-items-center">
+                                            <p class="price">261 ₽</p>
+                                            <p class="subprice">520 ₽</p>
+                                            <p class="discount">-42%</p>
+                                            <p class="product-cnt text-lt c-gray">За 1 шт.</p>
+                                        </div>
+                                        <p class="text-lt c-green m-0">10 товаров до уменьшения цены</p>
+                                    </div>
+                                    <div class="counter">
+                                        <button class="btn cnt-minus"></button>
+                                        <div class="counter-value">5</div>
+                                        <button class="btn cnt-plus"></button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <p class="text-lg text-nowrap align-self-center ms-4"><b>520 ₽</b></p>
+                        </div>
+                    </div>
                     <div class="basket-main d-flex flex-column">
                         <div class="d-flex justify-content-between gap-3">
                             <p class="text fw-medium">2 товара, 25 шт.</p>

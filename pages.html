@@ -8,13 +8,15 @@
     <meta property="og:image" content="img/1688-logo.svg">
     <meta property="twitter:image" content="img/1688-logo.svg">
     <meta name="description" content="1688">
-
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+        
         body {
             background-color: #F6F6FA;
+            font-family: "Inter", sans-serif;
         }
         .overflow-scroll::-webkit-scrollbar {
             display: none;
@@ -27,6 +29,7 @@
         .btn-outline-danger,
         .btn-outline-warning {
             pointer-events: none;
+            order: 1;
         }
     </style>
 
@@ -44,24 +47,18 @@
                         <a href="error.html" class="btn btn-outline-success w-100">Произошла ошибка</a>
                         <a href="favorites.html" class="btn btn-outline-success w-100">Избранное</a>
                         <a href="info.html" class="btn btn-outline-success w-100">Информация</a>
-                        <a href="catalog.html" class="btn btn-outline-success w-100">
-                            Каталог                            
-                        </a>
+                        <a href="catalog.html" class="btn btn-outline-success w-100">Каталог</a>
                         <a href="order.html" class="btn btn-outline-success w-100">Оформление заказа(без адреса)</a>
                         <a href="order-set-adress.html" class="btn btn-outline-success w-100">Оформление заказа</a>
                         <a href="account.html" class="btn btn-outline-success w-100">Профиль</a>
+
                         <a href="product-card.html" class="btn btn-outline-warning w-100">
                             Карточка товара
                             <span class="spinner-border spinner-border-sm text-warning" role="status"></span>                              
                         </a>
-                        <a href="basket-empty.html" class="btn btn-outline-warning w-100">
-                            Корзина (без авторизации)
-                            <span class="spinner-border spinner-border-sm text-warning" role="status"></span>  
-                        </a>
-                        <a href="basket.html" class="btn btn-outline-warning w-100">
-                            Корзина
-                            <span class="spinner-border spinner-border-sm text-warning" role="status"></span>  
-                        </a>
+                        
+                        <a href="basket-empty.html" class="btn btn-outline-success w-100">Корзина (без авторизации)</a>
+                        <a href="basket.html" class="btn btn-outline-success w-100">Корзина</a>
                     </div>
                 </div>
             </div>

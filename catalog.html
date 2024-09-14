@@ -628,6 +628,11 @@
 
             })
         }
+
+        
+        function sliderUpdate(element, value, isFirst) {
+            element.parentElement.nextElementSibling.noUiSlider.set([isFirst?value:null, isFirst?null:value]);
+        }
     </script>
     <script src="js/main.js"></script>
 </body>

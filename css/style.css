@@ -111,8 +111,10 @@ h4.title .text {
 }
 
 
-p.text {
+p.text,
+span.text {
     line-height: 160%;
+    font-size: 16px;
 }
 
 p.text-lg {
@@ -165,6 +167,9 @@ p.text-lt,
 
 .c-text {
     color: #323234;
+}
+.c-green {
+    color: var(--color-green);
 }
 
 a.link-primary,
@@ -587,6 +592,10 @@ h2.title .c-gray {
     margin-left: 8px;
 }
 
+.product-price .product-cnt {
+    margin-left: 8px;
+}
+
 .product-title {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -806,6 +815,14 @@ h2.title .c-gray {
     left: 160px;
 }
 
+.basket-wrapper {
+    gap: 80px;
+}
+
+.basket-products {
+    gap: 20px;
+}
+
 .basket-main-col {
     width: 100%;
     max-width: 475px;
@@ -876,6 +893,14 @@ h2.title .c-gray {
     max-width: 710px;
 }
 
+.order-item {
+    width: 146px;
+}
+
+.order-item img {
+    width: 100%;
+}
+
 .order-item-counter {
     top: 0;
     right: 0;
@@ -939,6 +964,84 @@ h2.title .c-gray {
     padding: 20px;
 }
 
+.basket-product-card input[type='checkbox'] + label {
+    margin-top: 60px;
+}
+
+.basket-product-card .btn.btn-blue {
+    line-height: 115%;
+    margin-top: 20px;
+}
+
+.product-image {
+    width: 146px;
+    min-width: 146px;
+    height: 146px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.product-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+input[type='checkbox'] + label { 
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    border: 1px solid var(--color-grey);
+    background-color: var(--color-white);
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    cursor: pointer;
+    margin-right: 32px;
+}
+
+input[type='checkbox']:checked + label {
+    background-color: #323234;
+    border: 1px solid #323234;
+    background-image: url("data:image/svg+xml,%3Csvg width='11' height='8' viewBox='0 0 11 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 1L3.8125 7L1 4.27273' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+
+.counter {
+    display: flex;
+    background-color: #F6F6FA;
+    border-radius: 5px;
+    align-items: center;
+    overflow: hidden;
+    max-height: 34px;
+}
+
+.counter .btn {
+    width: 44px;
+    min-width: 44px;
+    height: 34px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #F6F6FA;
+    font-size: 0;
+    border-radius: 0;
+}
+.counter .counter-value {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    min-width: 34px;
+}
+
+.counter .btn.cnt-minus {
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='2' viewBox='0 0 16 2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1H15' stroke='%23323234' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+
+.counter .btn.cnt-plus {
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 1V15M1 8H15' stroke='%23323234' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+
+.product-info .product-price p {
+    margin-bottom: 0;
+}
 
 @media (max-width: 1399.98px) { 
 
@@ -1008,6 +1111,46 @@ h2.title .c-gray {
     .footer-inner {
         padding-bottom: 70px;
     }
+
+    .product-item {
+        max-width: 170px;
+        gap: 3px;
+    }
+
+    .product-item .product-price {
+        position: relative;
+    }
+    .banner-flex .products-grid {
+        max-height: 514px;
+    }
+    .banner-item {
+        width: 365px;
+        min-width: 365px;
+        height: 514px;
+    }
+    .banner-item img {
+        width: 100%;
+    }
+    .product-price .price {
+        font-size: 16px;
+    }
+    .product-title {
+        font-size: 12px;
+    }
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, 170px);
+    }
+    .product-price .discount {
+        position: absolute;
+        z-index: 1;
+        background-color: var(--color-white);
+        border-radius: 5px 5px 5px 10px;
+        padding: 2px 4px;
+        left: 7px;
+        top: -38px;
+        margin-left: 0;
+    }
+
 }
 
 @media (max-width: 767.98px) {  
@@ -1106,6 +1249,9 @@ h2.title .c-gray {
     }
     .btn.btn-blue:active {
         color: var(--color-blue);
+    }
+    .counter .btn:hover {
+        background-color: #E6E6E6;
     }
 }
 

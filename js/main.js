@@ -91,6 +91,56 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    const checkAll = document.getElementById('basket-check-all');
+    const checkItems = document.querySelectorAll('.check-item');
+    const cntNow = document.querySelector('.cnt-now');
+    const cntTotal = document.querySelector('.cnt-total');
+    const removeButton = document.getElementById('btn-basket-remove')
+
+    if (checkItems.length > 0 && checkAll) {
+        checkAll.addEventListener('change', () => {
+            checkItems.forEach(item => item.checked = checkAll.checked);
+            handleUpdateCounter();
+        });
+
+        checkItems.forEach(item => {
+            item.addEventListener('change', handleUpdateCheckAll);
+        });
+    }
+
+    if (cntTotal) {
+        cntTotal.textContent = checkItems.length;
+    }
+
+    if (removeButton) {
+        removeButton.addEventListener('click', hideCheckedProducts)
+    }
+
+    function handleUpdateCheckAll() {
+        const allChecked = Array.from(checkItems).every(item => item.checked);
+        checkAll.checked = allChecked;
+        handleUpdateCounter();
+    }
+    
+    function handleUpdateCounter() {
+        const checkedCount = Array.from(checkItems).filter(item => item.checked && !(item.closest('.basket-product-card').classList.contains('remove'))).length;
+        cntNow.textContent = checkedCount;
+    }
+
+    function hideCheckedProducts() {
+        const allChecked = Array.from(checkItems).filter(item => item.checked);
+
+        allChecked.forEach(el=>{
+            let item = el.closest('.basket-product-card')
+
+            item.classList.add('remove')
+            setTimeout(()=>{item.style.display = 'none'}, 500)
+            cntTotal.textContent = parseInt(cntTotal.textContent) - 1;
+        })
+
+        handleUpdateCounter()
+    }
 });
 
 function validInputNumber(event) {
@@ -113,6 +163,3 @@ function handleCounterAction(item) {
     }
 }
 
-function handleBasketCheckboxUpdate() {
-
-}

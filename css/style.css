@@ -967,6 +967,16 @@ h2.title .c-gray {
     padding: 20px;
 }
 
+.basket-product-card {
+    display: flex;
+    transition: opacity 400ms ease, transform 400ms ease;
+}
+
+.basket-product-card.remove {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
 .basket-product-card input[type='checkbox'] + label {
     margin-top: 60px;
 }
@@ -1050,6 +1060,11 @@ input[type='checkbox']:checked + label {
 
 .product-info .product-price p {
     margin: 0;
+}
+.cnt-now, .cnt-total {
+    min-width: 13px;
+    text-align: center;
+    display: inline-block;
 }
 
 @media (max-width: 1399.98px) { 

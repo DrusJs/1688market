@@ -142,7 +142,7 @@
         <main class="main flex-grow-1">
             <div class="container">
                 <h1 class="title mt-5">Корзина</h1>
-                <div class="basket-wrapper d-flex justify-content-between align-items-start mt-5">
+                <div class="basket-wrapper d-flex flex-xl-row flex-column justify-content-between align-items-start mt-5">
                     <div class="basket-products d-flex flex-column">
                         <div class="d-flex align-items-center">
                             <input type="checkbox" name="basket-check-all" id="basket-check-all" class="d-none check-all">
@@ -238,10 +238,12 @@
                         </div>
                     </div>
                     <div class="basket-main-col d-flex flex-column gap-3">
-                        <div class="basket-main empty align-items-center d-flex flex-column">
-                            <p class="text-lg fw-medium">Не выбрано ни одного товара</p>
-                            <p class="c-red fw-medium">Минимальная сумма заказа 15 000 ₽</p>
-                            <button class="btn btn-secondary btn-lg disabled mt-3 w-100 py-3 fw-semibold">К оформлению</button>
+                        <div class="basket-main empty">
+                            <div class="basket-main-inner align-items-center d-flex flex-column">
+                                <p class="text-lg fw-medium">Не выбрано ни одного товара</p>
+                                <p class="c-red fw-medium">Минимальная сумма заказа 15 000 ₽</p>
+                                <button class="btn btn-secondary btn-lg disabled mt-3 w-100 py-3 fw-semibold">К оформлению</button>
+                            </div>
                         </div>
                         <button class="btn auth-btn w-100 py-3">Авторизуйтесь для оформления заказа</button>
                     </div>

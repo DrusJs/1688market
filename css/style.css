@@ -829,12 +829,15 @@ h2.title .c-gray {
 }
 
 .basket-main {
-    gap: 10px;
     padding: 35px 40px;
     border: 2px solid var(--color-green);
     border-radius: 30px;
     width: 100%;
     max-width: 475px;
+}
+
+.basket-main-inner {
+    gap: 10px;
 }
 
 .basket-main p {
@@ -1010,7 +1013,6 @@ input[type='checkbox']:checked + label {
     background-color: #F6F6FA;
     border-radius: 5px;
     align-items: center;
-    overflow: hidden;
     max-height: 34px;
 }
 
@@ -1031,20 +1033,29 @@ input[type='checkbox']:checked + label {
     min-width: 34px;
 }
 
+.product-info .product-price {
+    flex-wrap: wrap;
+    gap: 2px 10px;
+}
+
 .counter .btn.cnt-minus {
-    background-image: url("data:image/svg+xml,%3Csvg width='16' height='2' viewBox='0 0 16 2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1H15' stroke='%23323234' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='2' viewBox='0 0 16 2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1H15' stroke='%23323234' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A"); 
+    border-radius: 5px  0 0 5px;
 }
 
 .counter .btn.cnt-plus {
     background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 1V15M1 8H15' stroke='%23323234' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    border-radius: 0 5px 5px 0;
 }
 
 .product-info .product-price p {
-    margin-bottom: 0;
+    margin: 0;
 }
 
 @media (max-width: 1399.98px) { 
-
+    .basket-wrapper {
+        gap: 30px;
+    }
 }
 
 @media (max-width: 1199.98px) { 
@@ -1055,6 +1066,16 @@ input[type='checkbox']:checked + label {
     .header .btn:has(.menu-link) {
         padding: 6px;
     }
+
+    .basket-wrapper .basket-main,
+    .basket-wrapper .basket-main-col {
+        max-width: none;
+    }
+    .basket-main-inner {
+        margin: 0 auto;
+        max-width: 400px;
+        width: 100%;
+    }
 }
 
 @media (max-width: 991.98px) {  
@@ -1064,6 +1085,24 @@ input[type='checkbox']:checked + label {
     .container {
         padding: 0 15px;
     }
+
+    .basket-wrapper {
+        margin-left: -15px;
+        width: 100vw;
+    }
+    .basket-products {        
+        padding: 20px 15px;
+        background-color: var(--color-white);
+        border-radius: 15px;
+    }
+    
+
+
+    .basket-wrapper .basket-main,
+    .basket-wrapper .basket-main-col {
+        background-color: var(--color-white);
+    }
+
     .footer-inner.mt-footer {
         margin-top: 40px;
     }

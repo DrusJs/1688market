@@ -969,6 +969,7 @@ h2.title .c-gray {
 
 .basket-product-card {
     display: flex;
+    position: relative;
     transition: opacity 400ms ease, transform 400ms ease;
 }
 
@@ -1109,6 +1110,7 @@ input[type='checkbox']:checked + label {
         padding: 20px 15px;
         background-color: var(--color-white);
         border-radius: 15px;
+        width: 100%;
     }
     
 
@@ -1194,7 +1196,7 @@ input[type='checkbox']:checked + label {
     .products-grid {
         grid-template-columns: repeat(auto-fill, 170px);
     }
-    .product-price .discount {
+    .product-item .product-price .discount {
         position: absolute;
         z-index: 1;
         background-color: var(--color-white);
@@ -1216,6 +1218,9 @@ input[type='checkbox']:checked + label {
     .search-result {
         padding-top: 40px;
     }
+    .basket-main {
+        padding: 17px 14px;
+    }
 }
 
 @media (max-width: 575.98px) {  
@@ -1230,6 +1235,14 @@ input[type='checkbox']:checked + label {
     .error-page-title {
         font-size: 28px;
     }
+
+    .basket-product-card input[type='checkbox'] + label {
+        position: absolute;
+        right: 16px;
+        top: 10px;
+        margin-top: 0px;
+        margin-right: 0px;
+    } 
     
     .back-link {
         font-size: 18px;

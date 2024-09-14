@@ -79,4 +79,14 @@ document.addEventListener('DOMContentLoaded', () => {
             searchWrapper.classList.remove('active');
         }
     });
+
+
 });
+
+function validInputNumber(event) {
+    return(event.charCode >= 48 && event.charCode <= 57 && /^\d{0,3}$/.test(this.value))
+}
+
+function sliderUpdate(element, value, isFirst) {
+    element.parentElement.nextElementSibling.noUiSlider.set([isFirst?value:null, isFirst?null:value]);
+}

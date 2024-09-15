@@ -19,16 +19,16 @@
         <a href="/" class="btn mobile-nav-link">
             <img src="img/mobile-home.svg" alt="">
         </a>
-        <a href="/catalog.html" class="btn mobile-nav-link">
+        <a href="catalog.html" class="btn mobile-nav-link">
             <img src="img/mobile-menu.svg" alt="">
         </a>
-        <a href="/basket.html" class="btn mobile-nav-link">
+        <a href="basket.html" class="btn mobile-nav-link">
             <img src="img/mobile-cart.svg" alt="">
         </a>
-        <a href="/favorites.html" class="btn mobile-nav-link">
+        <a href="favorites.html" class="btn mobile-nav-link">
             <img src="img/mobile-heart.svg" alt="">
         </a>
-        <a href="/account.html" class="btn mobile-nav-link">
+        <a href="account.html" class="btn mobile-nav-link">
             <img src="img/mobile-package.svg" alt="">
         </a>
     </div>
@@ -161,7 +161,7 @@
                                 <h4 class="title">Кузнецов Илья Дмитриевич</h4>
                                 <p class="text-lg fw-medium">+7 926 123 21 32</p>
                                 <p class="text-lg">Россия, Москва, Московская область,<br> Пушкина, 22, 6, 110000</p>
-                                <button class="btn btn-blue w-fit p-0">
+                                <button class="btn btn-blue w-fit p-0" data-bs-toggle="modal" data-bs-target="#modal-delivery-data">
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10 16.6667H17.5M13.75 2.91669C14.0815 2.58517 14.5312 2.39893 15 2.39893C15.2321 2.39893 15.462 2.44465 15.6765 2.53349C15.891 2.62233 16.0858 2.75254 16.25 2.91669C16.4142 3.08085 16.5444 3.27572 16.6332 3.4902C16.722 3.70467 16.7678 3.93455 16.7678 4.16669C16.7678 4.39884 16.722 4.62871 16.6332 4.84319C16.5444 5.05766 16.4142 5.25254 16.25 5.41669L5.83333 15.8334L2.5 16.6667L3.33333 13.3334L13.75 2.91669Z" stroke="#547DFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>                                        
@@ -366,7 +366,7 @@
                                     </div>
                                 </div>
 
-                                <button class="btn btn-blue w-fit p-0 mt-3">
+                                <button class="btn btn-blue w-fit p-0 mt-3"  data-bs-toggle="modal" data-bs-target="#modal-profile-data">
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10 16.6667H17.5M13.75 2.91669C14.0815 2.58517 14.5312 2.39893 15 2.39893C15.2321 2.39893 15.462 2.44465 15.6765 2.53349C15.891 2.62233 16.0858 2.75254 16.25 2.91669C16.4142 3.08085 16.5444 3.27572 16.6332 3.4902C16.722 3.70467 16.7678 3.93455 16.7678 4.16669C16.7678 4.39884 16.722 4.62871 16.6332 4.84319C16.5444 5.05766 16.4142 5.25254 16.25 5.41669L5.83333 15.8334L2.5 16.6667L3.33333 13.3334L13.75 2.91669Z" stroke="#547DFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>                                        
@@ -459,8 +459,134 @@
         </footer>
     </div>
 
-    <div class="modal-wrapper" id="preview-modal">
-    </div>
+
+    
+
+    <div class="modal fade" id="modal-sign-in" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content modal-auth">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h4 class="title">Войдите в профиль</h4>
+            <div class="input-wrapper">
+                <input type="email" name="signin-email" id="signin-email" placeholder="E-mail">
+                <label for="signin-email">Введите данные</label>
+            </div>
+            <div class="input-wrapper">
+                <input type="password" name="signin-email" id="signin-email" placeholder="Пароль">
+                <label for="signin-email">Введите данные</label>
+            </div>
+            <button class="btn btn-primary">Войти</button>
+            <input type="checkbox" name="privacy-check1" id="privacy-check1" class="d-none">
+            <label for="privacy-check1">Я принимаю  <a href="#" class="link-primary">условия пользовательского соглашения</a></label>
+            <button class="btn btn-blue text-lg fw-medium" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#modal-sign-up">Зарегистрироваться</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal-sign-up" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content modal-auth">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h4 class="title">Регистрация</h4>
+            <div class="input-wrapper">
+                <input type="email" name="signup-email" id="signup-email" placeholder="E-mail">
+                <label for="signup-email">Введите данные</label>
+            </div>
+            <div class="input-wrapper">
+                <input type="text" name="signup-email" id="signup-email" placeholder="Номер телефона">
+                <label for="signup-email">Введите данные</label>
+            </div>
+            <div class="input-wrapper">
+                <input type="password" name="signup-email" id="signup-email" placeholder="Пароль">
+                <label for="signup-email">Введите данные</label>
+            </div>
+            <button class="btn btn-primary">Войти</button>
+            <input type="checkbox" name="privacy-check2" id="privacy-check2" class="d-none">
+            <label for="privacy-check2">Я принимаю  <a href="#" class="link-primary">условия пользовательского соглашения</a></label>
+            <div class="d-flex align-items-center gap-2 justify-content-center">
+                <p class="text fw-medium m-0">Есть аккаунт?</p>
+                <button class="btn btn-blue fw-medium p-0" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#modal-sign-in">Войдите</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal-delivery-data" tabindex="-1">
+        <div class="modal-dialog lg-modal">
+          <div class="modal-content modal-data-change">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h4 class="title">Изменить данные</h4>
+            <div class="d-flex gap-3">
+                <div class="col-md-6 col-12 input-wrapper">
+                    <input type="email" name="signin-email" id="signin-email" placeholder="Страна">
+                    <label for="signin-email">Страна</label>
+                </div>            
+                <div class="col-md-6 col-12 input-wrapper">
+                    <input type="email" name="signin-email" id="signin-email" placeholder="Город">
+                    <label for="signin-email">Город</label>
+                </div>
+            </div>
+            <div class="d-flex gap-3">
+                <div class="col-md-6 col-12 input-wrapper">
+                    <input type="email" name="signin-email" id="signin-email" placeholder="Регион / Область">
+                    <label for="signin-email">Регион / Область</label>
+                </div>            
+                <div class="col-md-6 col-12 input-wrapper">
+                    <input type="email" name="signin-email" id="signin-email" placeholder="Индекс">
+                    <label for="signin-email">Индекс</label>
+                </div>
+            </div>
+            <div class="d-flex gap-2">
+                <div class="col-md-2 col-12 input-wrapper">
+                    <input type="email" name="signin-email" id="signin-email" placeholder="Дом">
+                    <label for="signin-email">Дом</label>
+                </div>            
+                <div class="col-md-2 col-12 input-wrapper">
+                    <input type="email" name="signin-email" id="signin-email" placeholder="Квартира">
+                    <label for="signin-email">Квартира</label>
+                </div>           
+                <div class="col-md-8 col-12 input-wrapper">
+                    <input type="email" name="signin-email" id="signin-email" placeholder="Улица">
+                    <label for="signin-email">Улица</label>
+                </div>
+            </div>
+            <button class="btn btn-primary w-50">Сохранить</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal-profile-data" tabindex="-1">
+        <div class="modal-dialog lg-modal">
+          <div class="modal-content modal-data-change">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h4 class="title">Изменить данные</h4>
+            <div class="d-flex gap-3">
+                <div class="col-md-6 col-12 input-wrapper">
+                    <input type="email" name="signin-email" id="signin-email" placeholder="Имя">
+                    <label for="signin-email">ФИО</label>
+                </div>            
+                <div class="col-md-6 col-12 input-wrapper">
+                    <input type="email" name="signin-email" id="signin-email" placeholder="Телефон">
+                    <label for="signin-email">Телефон</label>
+                </div>
+            </div>
+            <div class="input-wrapper">
+                <input type="email" name="signin-email" id="signin-email" placeholder="E-mail">
+                <label for="signin-email">Email</label>
+            </div> 
+            <div class="input-wrapper">
+                <input type="text" name="signin-email" id="signin-email" placeholder="Пароль">
+                <label for="signin-email">Пароль</label>
+            </div>
+            <div class="input-wrapper">
+                <input type="password" name="signin-email" id="signin-email" placeholder="Подтвердите пароль">
+                <label for="signin-email">Подтвердите пароль</label>
+            </div>
+            <button class="btn btn-primary w-50">Сохранить</button>
+          </div>
+        </div>
+      </div>
+      
     
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>

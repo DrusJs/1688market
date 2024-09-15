@@ -23,16 +23,16 @@
         <a href="/" class="btn mobile-nav-link">
             <img src="img/mobile-home.svg" alt="">
         </a>
-        <a href="/catalog.html" class="btn mobile-nav-link">
+        <a href="catalog.html" class="btn mobile-nav-link">
             <img src="img/mobile-menu.svg" alt="">
         </a>
-        <a href="/basket.html" class="btn mobile-nav-link">
+        <a href="basket.html" class="btn mobile-nav-link">
             <img src="img/mobile-cart.svg" alt="">
         </a>
-        <a href="/favorites.html" class="btn mobile-nav-link">
+        <a href="favorites.html" class="btn mobile-nav-link">
             <img src="img/mobile-heart.svg" alt="">
         </a>
-        <a href="/account.html" class="btn mobile-nav-link">
+        <a href="account.html" class="btn mobile-nav-link">
             <img src="img/mobile-package.svg" alt="">
         </a>
     </div>
@@ -711,8 +711,56 @@
         </footer>
     </div>
 
-    <div class="modal-wrapper" id="preview-modal">
-    </div>
+
+
+    <div class="modal fade" id="modal-sign-in" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content modal-auth">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h4 class="title">Войдите в профиль</h4>
+            <div class="input-wrapper">
+                <input type="email" name="signin-email" id="signin-email" placeholder="E-mail">
+                <label for="signin-email">Введите данные</label>
+            </div>
+            <div class="input-wrapper">
+                <input type="password" name="signin-email" id="signin-email" placeholder="Пароль">
+                <label for="signin-email">Введите данные</label>
+            </div>
+            <button class="btn btn-primary">Войти</button>
+            <input type="checkbox" name="privacy-check1" id="privacy-check1" class="d-none">
+            <label for="privacy-check1">Я принимаю  <a href="#" class="link-primary">условия пользовательского соглашения</a></label>
+            <button class="btn btn-blue text-lg fw-medium" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#modal-sign-up">Зарегистрироваться</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal-sign-up" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content modal-auth">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h4 class="title">Регистрация</h4>
+            <div class="input-wrapper">
+                <input type="email" name="signin-email" id="signin-email" placeholder="E-mail">
+                <label for="signin-email">Введите данные</label>
+            </div>
+            <div class="input-wrapper">
+                <input type="text" name="signin-email" id="signin-email" placeholder="Номер телефона">
+                <label for="signin-email">Введите данные</label>
+            </div>
+            <div class="input-wrapper">
+                <input type="password" name="signin-email" id="signin-email" placeholder="Пароль">
+                <label for="signin-email">Введите данные</label>
+            </div>
+            <button class="btn btn-primary">Войти</button>
+            <input type="checkbox" name="privacy-check2" id="privacy-check2" class="d-none">
+            <label for="privacy-check2">Я принимаю  <a href="#" class="link-primary">условия пользовательского соглашения</a></label>
+            <div class="d-flex align-items-center gap-2 justify-content-center">
+                <p class="text fw-medium m-0">Есть аккаунт?</p>
+                <button class="btn btn-blue fw-medium p-0" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#modal-sign-in">Войдите</button>
+            </div>
+          </div>
+        </div>
+      </div>
     
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/swiper.min.js"></script>

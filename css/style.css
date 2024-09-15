@@ -1059,8 +1059,18 @@ h2.title .c-gray {
     height: auto;
     object-fit: cover;
 }
+.modal input[type='checkbox'] + label::before {
+    margin-right: 8px;
+    margin-bottom: -3px;
+    border-radius: 4px;
+    width: 16px;
+    min-width: 16px;
+    height: 16px;
+}
 
-input[type='checkbox'] + label { 
+input[type='checkbox'] + label::before { 
+    content: '';
+    display: inline-block;
     width: 20px;
     min-width: 20px;
     height: 20px;
@@ -1073,7 +1083,7 @@ input[type='checkbox'] + label {
     margin-right: 32px;
 }
 
-input[type='checkbox']:checked + label {
+input[type='checkbox']:checked + label::before {
     background-color: #323234;
     border: 1px solid #323234;
     background-image: url("data:image/svg+xml,%3Csvg width='11' height='8' viewBox='0 0 11 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 1L3.8125 7L1 4.27273' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
@@ -1227,6 +1237,86 @@ input[type='checkbox']:checked + label {
 
 .product-option.active {
     border: 2px solid #323234;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input-wrapper input {
+    border-radius: 3px;
+    border: 1px solid #cfcfcf;
+    padding: 14px 20px;
+    font-size: 18px;
+    line-height: 100%;
+    font-weight: 400;
+    outline: none;
+    color: #323234;
+}
+
+.input-wrapper label {
+    color: var(--color-grey);
+    font-size: 15px;
+}
+
+.input-wrapper input::placeholder {
+    color: #B7B7B8;
+    font-weight: 600;
+    opacity: 1;
+}
+
+.input-wrapper input:focus {
+    border: 1px solid var(--color-primary);
+}
+
+.input-wrapper input:focus::placeholder {
+    opacity: 0;
+}
+
+.modal .modal-dialog {
+    
+    padding: 0 15px;
+}
+
+.modal .modal-content {
+    padding: 40px;
+    border-radius: 30px;
+    display: flex; 
+    flex-direction: column;
+}
+
+.modal-auth {    
+    gap: 10px;
+}
+
+.modal-auth .btn-close,
+.modal-data-change .btn-close {
+    align-self: flex-end;
+}
+
+.modal-auth .title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.modal-data-change .title {
+    margin-bottom: 20px;
+}
+
+.modal-data-change {
+    gap: 20px;
+}
+
+
+.modal-dialog {
+    max-width: 676px;
+    width: 100%;
+}
+
+.modal-dialog.lg-modal {
+    max-width: 877px;
+    width: 100%;    
 }
 
 @media (max-width: 1399.98px) { 

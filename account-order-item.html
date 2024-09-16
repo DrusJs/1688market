@@ -142,257 +142,156 @@
         <main class="main flex-grow-1">
             <div class="container">
                 <div class="account-wrapper d-flex align-items-start gap-4 mt-5">
-                    <div class="nav flex-column nav-pills nav-account gap-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <div class="d-md-flex d-none flex-column nav-account gap-3">
 
-                        <button class="nav-link active" id="v-pills-delivery-tab" data-bs-toggle="pill" data-bs-target="#v-pills-delivery" type="button" role="tab" aria-controls="v-pills-delivery" aria-selected="true">Доставка</button>
+                        <a href="account.html" class="nav-link" >Доставка</a>
 
-                        <button class="nav-link" id="v-pills-orders-tab" data-bs-toggle="pill" data-bs-target="#v-pills-orders" type="button" role="tab" aria-controls="v-pills-orders" aria-selected="false">Заказы</button>
+                        <button class="nav-link active">Заказы</button>
 
-                        <button class="nav-link" id="v-pills-wallet-tab" data-bs-toggle="pill" data-bs-target="#v-pills-wallet" type="button" role="tab" aria-controls="v-pills-wallet" aria-selected="false">Кошелек</button>
+                        <a class="nav-link" >Кошелек</a>
 
-                        <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Профиль</button>
+                        <a class="nav-link" >Профиль</a>
 
-                        <button class="nav-link logout">Выход</button>
+                        <a class="nav-link logout">Выход</a>
                       </div>
                       <div class="tab-content w-100" id="v-pills-tabContent">
-                        <div class="tab-pane fade show active" id="v-pills-delivery" role="tabpanel" aria-labelledby="v-pills-delivery-tab" tabindex="0">
-                            <div class="d-flex flex-column gap-2">
-                                <h2 class="title mb-3">Данные</h2>
-                                <p class="item-title">Кузнецов Илья Дмитриевич</p>
-                                <p class="text-lg fw-medium">+7 926 123 21 32</p>
-                                <p class="text-lg">Россия, Москва, Московская область,<br> Пушкина, 22, 6, 110000</p>
-                                <button class="btn btn-blue w-fit p-0" data-bs-toggle="modal" data-bs-target="#modal-delivery-data">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10 16.6667H17.5M13.75 2.91669C14.0815 2.58517 14.5312 2.39893 15 2.39893C15.2321 2.39893 15.462 2.44465 15.6765 2.53349C15.891 2.62233 16.0858 2.75254 16.25 2.91669C16.4142 3.08085 16.5444 3.27572 16.6332 3.4902C16.722 3.70467 16.7678 3.93455 16.7678 4.16669C16.7678 4.39884 16.722 4.62871 16.6332 4.84319C16.5444 5.05766 16.4142 5.25254 16.25 5.41669L5.83333 15.8334L2.5 16.6667L3.33333 13.3334L13.75 2.91669Z" stroke="#547DFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <div class="d-flex align-items-start gap-3 flex-xl-row flex-column">
+                            <div class="account-orders">
+                                <a href="account.html" class="btn d-flex align-items-center gap-2 c-text">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19 12L5 12M5 12L12 19M5 12L12 5" stroke="#575758" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    К списку заказов
+                                </a>
+                                <div class="d-flex align-items-center gap-2 flex-wrap">
+                                    <p class="item-title fw-medium m-0"><span class="c-gray ps-1">Номер заказа</span> RUNK-36</p>
+                                    <div class="status await">Ожидает оплаты</div>
+                                </div>
+                                <div class="d-flex flex-wrap align-items-center gap-2">
+                                    <p class="m-0 c-gray">Сумма к оплате</p>
+                                    <p class="text fw-semibold c-primary">11 022.77 ₽</p>
+                                </div>
+                                <button class="btn btn-primary w-fit">Оплатить заказ</button>
+                                <div class="d-flex flex-wrap align-items-center gap-2">
+                                    <p class="text-lt m-0 c-gray">Сумма товаров</p>
+                                    <p class="text fw-semibold">10 020.67 ₽</p>
+                                </div>
+                                <div class="d-flex flex-wrap align-items-center gap-2">
+                                    <p class="text-lt m-0 c-gray">Сервисный сбор</p>
+                                    <p class="text fw-semibold">1 002.07 ₽</p>
+                                </div>
+                                <div class="d-flex flex-wrap align-items-center gap-2">
+                                    <p class="text-lt m-0 c-gray">Общая стоимость товаров</p>
+                                    <p class="text fw-semibold">11 022.77 ₽</p>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <p class="text-lt c-gray mb-1">Получатель</p>
+                                    <p class="c-text">Ергалиев Данияр Кунтуарович</p>
+                                    <p class="c-text">+7 926 123 21 32</p>
+                                    <p class="c-text">Россия, Москва, Московская область, ул. Пушкина, дом 22, кв. 6</p>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <p class="text-lt c-gray mb-1">Паспорт</p>
+                                    <p class="c-text">Ергалиев Данияр Кунтуарович</p>
+                                    <p class="c-text">+7 926 123 21 32</p>
+                                    <p class="c-text">Россия, Москва, Московская область, ул. Пушкина, дом 22, кв. 6</p>
+                                </div>
+                                <button class="btn btn-blue d-flex align-items-center gap-2 p-0">
+                                    Информация о получателе
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18 15.0005L12 9.00049L6 15.0005" stroke="#547DFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>                                        
-                                    <span class="ms-2">Редактировать данные</span>
                                 </button>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="v-pills-orders" role="tabpanel" aria-labelledby="v-pills-orders-tab" tabindex="0">
-                            <div class="d-flex flex-column gap-2">
-                                <h2 class="title">Активные заказы<span class="c-gray ps-3">1</span></h2>
-                                <div class="dropdown js-active-items mb-4">
-                                    <button class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Все
-                                    </button>
-                                  
-                                    <ul class="dropdown-menu">
-                                      <li><a class="dropdown-item active" href="#">Все</a></li>
-                                      <li><a class="dropdown-item" href="#">Ожидают оплаты</a></li>
-                                      <li><a class="dropdown-item" href="#">Доставленные</a></li>
-                                    </ul>
-                                </div>
-
-                                <div class="order-card">
-                                    <div class="order-head d-flex justify-content-between align-items-center">
-                                        <div class="d-flex align-items-center gap-4">
-                                            <div class="d-flex flex-column">
-                                                <p class="item-title c-text">30 августа <span class="text">2024</span></p>
-                                                <p class="text c-text">RUNK-44</p>
-                                            </div>
-                                            <div class="status success">Доставлен</div>
-                                            <button class="btn p-0">
-                                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M26.25 14.375C26.2543 16.0249 25.8688 17.6524 25.125 19.125C24.243 20.8897 22.8872 22.374 21.2093 23.4116C19.5314 24.4493 17.5978 24.9993 15.625 25C13.9752 25.0043 12.3476 24.6189 10.875 23.875L3.75 26.25L6.125 19.125C5.38116 17.6524 4.9957 16.0249 5 14.375C5.00076 12.4022 5.55076 10.4686 6.5884 8.79072C7.62603 7.11285 9.11032 5.75699 10.875 4.87504C12.3476 4.1312 13.9752 3.74573 15.625 3.75004H16.25C18.8554 3.89378 21.3163 4.99349 23.1614 6.83861C25.0065 8.68373 26.1063 11.1446 26.25 13.75V14.375Z" fill="#F46F4E"/>
-                                                </svg>                                                    
-                                            </button>
+                                <div class="account-orders-item mb-3">
+                                    <div class="orders-image d-flex flex-column gap-3">
+                                        <div class="orders-image-overflow">
+                                            <img src="img/order-item.png" alt="">
                                         </div>
-                                        <p class="item-title c-text">18 016.42 ₽</p>
+                                        <button class="btn btn-blue d-flex align-items-center gap-2 p-0">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M21 11.5C21.0034 12.8199 20.6951 14.1219 20.1 15.3C19.3944 16.7118 18.3098 17.8992 16.9674 18.7293C15.6251 19.5594 14.0782 19.9994 12.5 20C11.1801 20.0035 9.87812 19.6951 8.7 19.1L3 21L4.9 15.3C4.30493 14.1219 3.99656 12.8199 4 11.5C4.00061 9.92179 4.44061 8.37488 5.27072 7.03258C6.10083 5.69028 7.28825 4.6056 8.7 3.90003C9.87812 3.30496 11.1801 2.99659 12.5 3.00003H13C15.0843 3.11502 17.053 3.99479 18.5291 5.47089C20.0052 6.94699 20.885 8.91568 21 11V11.5Z" stroke="#547DFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>                                                
+                                            Комментарий к товару                         
+                                        </button>
                                     </div>
-                                    <div class="order-products">
-                                        <div class="d-flex flex-wrap gap-3">
-                                            <div class="order-item position-relative">
-                                                <img src="img/order-item.png" alt="product">
-                                                <p class="order-item-counter position-absolute">20</p>
-                                            </div>
-                                            <div class="order-item position-relative">
-                                                <img src="img/order-item.png" alt="product">
-                                                <p class="order-item-counter position-absolute">5</p>
-                                            </div>
+                                    <div class="d-flex flex-column gap-2">
+                                        <p class="text-sm c-text-sec">Футболка детская с принтом герои мультфильма Король лев, цвет серый/DSY00188-P1, размер 24 м</p>
+                                        <p class="text-lg"><b>10 400 ₽</b></p>
+                                        <div class="d-flex flex-column">
+                                            <p class="text c-text"><span class="text-lt c-gray">Продавец</span> <span class="fw-medium">SHOP</span></p>
+                                            <p class="text c-text"><span class="text-lt c-gray">Кол-во</span> <span class="fw-medium">20 шт</span></p>
+                                            <p class="text c-text"><span class="text-lt c-gray">Общий вес</span> <span class="fw-medium">1 кг</span></p>
+                                            <p class="text c-text"><span class="text-lt c-gray">Цена за 1 шт</span> <span class="fw-medium">520 ₽</span></p>
+                                            <p class="text c-text"><span class="text-lt c-gray">Сервисный сбор 10%</span> <span class="fw-medium">7.20 ₽</span></p>
+                                            <p class="text c-text"><span class="text-lt c-gray">Доставка по Китаю</span> <span class="fw-medium">604.80 ₽</span></p>
+                                            <p class="text c-text"><span class="text-lt c-gray">Цвет рамки:  Черный / Цвет линз: Без объектива</span></p>
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="order-card">
-                                    <div class="order-head d-flex justify-content-between align-items-center">
-                                        <div class="d-flex align-items-center gap-4">
-                                            <div class="d-flex flex-column">
-                                                <p class="item-title c-text">30 августа <span class="text">2024</span></p>
-                                                <p class="text c-text">RUNK-44</p>
-                                            </div>
-                                            <div class="status await">Ожидает оплаты</div>
-                                            <button class="btn p-0">
-                                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M26.25 14.375C26.2543 16.0249 25.8688 17.6524 25.125 19.125C24.243 20.8897 22.8872 22.374 21.2093 23.4116C19.5314 24.4493 17.5978 24.9993 15.625 25C13.9752 25.0043 12.3476 24.6189 10.875 23.875L3.75 26.25L6.125 19.125C5.38116 17.6524 4.9957 16.0249 5 14.375C5.00076 12.4022 5.55076 10.4686 6.5884 8.79072C7.62603 7.11285 9.11032 5.75699 10.875 4.87504C12.3476 4.1312 13.9752 3.74573 15.625 3.75004H16.25C18.8554 3.89378 21.3163 4.99349 23.1614 6.83861C25.0065 8.68373 26.1063 11.1446 26.25 13.75V14.375Z" fill="#F46F4E"/>
-                                                </svg>                                                    
-                                            </button>
+                                <div class="account-orders-item mb-3">
+                                    <div class="orders-image d-flex flex-column gap-3">
+                                        <div class="orders-image-overflow">
+                                            <img src="img/order-item.png" alt="">
                                         </div>
-                                        <p class="item-title c-text">18 016.42 ₽</p>
+                                        <button class="btn btn-blue d-flex align-items-center gap-2 p-0">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M21 11.5C21.0034 12.8199 20.6951 14.1219 20.1 15.3C19.3944 16.7118 18.3098 17.8992 16.9674 18.7293C15.6251 19.5594 14.0782 19.9994 12.5 20C11.1801 20.0035 9.87812 19.6951 8.7 19.1L3 21L4.9 15.3C4.30493 14.1219 3.99656 12.8199 4 11.5C4.00061 9.92179 4.44061 8.37488 5.27072 7.03258C6.10083 5.69028 7.28825 4.6056 8.7 3.90003C9.87812 3.30496 11.1801 2.99659 12.5 3.00003H13C15.0843 3.11502 17.053 3.99479 18.5291 5.47089C20.0052 6.94699 20.885 8.91568 21 11V11.5Z" stroke="#547DFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>                                                
+                                            Комментарий к товару                         
+                                        </button>
                                     </div>
-                                    <div class="order-products">
-                                        <div class="d-flex flex-wrap gap-3">
-                                            <div class="order-item position-relative">
-                                                <img src="img/order-item.png" alt="product">
-                                                <p class="order-item-counter position-absolute">40</p>
-                                            </div>
-                                            <div class="order-item position-relative">
-                                                <img src="img/order-item.png" alt="product">
-                                                <p class="order-item-counter position-absolute">40</p>
-                                            </div>
-                                            <div class="order-item position-relative">
-                                                <img src="img/order-item.png" alt="product">
-                                                <p class="order-item-counter position-absolute">40</p>
-                                            </div>
+                                    <div class="d-flex flex-column gap-2">
+                                        <p class="text-sm c-text-sec">Футболка детская с принтом герои мультфильма Король лев, цвет серый/DSY00188-P1, размер 24 м</p>
+                                        <p class="text-lg"><b>10 400 ₽</b></p>
+                                        <div class="d-flex flex-column">
+                                            <p class="text c-text"><span class="text-lt c-gray">Продавец</span> <span class="fw-medium">SHOP</span></p>
+                                            <p class="text c-text"><span class="text-lt c-gray">Кол-во</span> <span class="fw-medium">20 шт</span></p>
+                                            <p class="text c-text"><span class="text-lt c-gray">Общий вес</span> <span class="fw-medium">1 кг</span></p>
+                                            <p class="text c-text"><span class="text-lt c-gray">Цена за 1 шт</span> <span class="fw-medium">520 ₽</span></p>
+                                            <p class="text c-text"><span class="text-lt c-gray">Сервисный сбор 10%</span> <span class="fw-medium">7.20 ₽</span></p>
+                                            <p class="text c-text"><span class="text-lt c-gray">Доставка по Китаю</span> <span class="fw-medium">604.80 ₽</span></p>
+                                            <p class="text c-text"><span class="text-lt c-gray">Цвет рамки:  Черный / Цвет линз: Без объектива</span></p>
                                         </div>
                                     </div>
-                                </div>
-
-                                <div class="order-card">
-                                    <div class="order-head d-flex justify-content-between align-items-center">
-                                        <div class="d-flex align-items-center gap-4">
-                                            <div class="d-flex flex-column">
-                                                <p class="item-title c-text">30 августа <span class="text">2024</span></p>
-                                                <p class="text c-text">RUNK-44</p>
-                                            </div>
-                                            <div class="status refuse">Отменен</div>
-                                            <button class="btn p-0">
-                                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M26.25 14.375C26.2543 16.0249 25.8688 17.6524 25.125 19.125C24.243 20.8897 22.8872 22.374 21.2093 23.4116C19.5314 24.4493 17.5978 24.9993 15.625 25C13.9752 25.0043 12.3476 24.6189 10.875 23.875L3.75 26.25L6.125 19.125C5.38116 17.6524 4.9957 16.0249 5 14.375C5.00076 12.4022 5.55076 10.4686 6.5884 8.79072C7.62603 7.11285 9.11032 5.75699 10.875 4.87504C12.3476 4.1312 13.9752 3.74573 15.625 3.75004H16.25C18.8554 3.89378 21.3163 4.99349 23.1614 6.83861C25.0065 8.68373 26.1063 11.1446 26.25 13.75V14.375Z" fill="#F46F4E"/>
-                                                </svg>                                                    
-                                            </button>
-                                        </div>
-                                        <p class="item-title c-text">18 016.42 ₽</p>
-                                    </div>
-                                    <div class="order-products">
-                                        <div class="d-flex flex-wrap gap-3">
-                                            <div class="order-item position-relative">
-                                                <img src="img/order-item.png" alt="product">
-                                                <p class="order-item-counter position-absolute">20</p>
-                                            </div>
-                                            <div class="order-item position-relative">
-                                                <img src="img/order-item.png" alt="product">
-                                                <p class="order-item-counter position-absolute">5</p>
-                                            </div>
-                                            <div class="order-item position-relative">
-                                                <img src="img/order-item.png" alt="product">
-                                                <p class="order-item-counter position-absolute">5</p>
-                                            </div>
-                                            <div class="order-item position-relative">
-                                                <img src="img/order-item.png" alt="product">
-                                                <p class="order-item-counter position-absolute">5</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <button class="show-more w-100 mt-4">
-                                    Показать ещё
-                                </button>
-                                <div class="pagination mt-4">                    
-                                    <div class="pagination-item prev d-none">Назад</div>
-                                    <div class="pagination-item active">1</div>
-                                    <div class="pagination-item">2</div>
-                                    <div class="pagination-item">3</div>
-                                    <div class="pagination-item">4</div>
-                                    <div class="pagination-item">5</div>
-                                    <div class="pagination-item">6</div>
-                                    <div class="pagination-item">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="#0E0E10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path d="M19 13C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11C18.4477 11 18 11.4477 18 12C18 12.5523 18.4477 13 19 13Z" stroke="#0E0E10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path d="M5 13C5.55228 13 6 12.5523 6 12C6 11.4477 5.55228 11 5 11C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13Z" stroke="#0E0E10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>                            
-                                    </div>
-                                    <div class="pagination-item">33</div>
-                                    <div class="pagination-item next">Дальше</div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="tab-pane fade" id="v-pills-wallet" role="tabpanel" aria-labelledby="v-pills-wallet-tab" tabindex="0">
-                            <div class="d-flex flex-column gap-2">
-                                <div class="d-flex align-items-end gap-4">
-                                    <h2 class="title m-0">Счет</h2>
-                                    <p class="text-title c-gray m-0">Номер счета: <span>13</span></p>
-                                </div>
-                                <button class="btn btn-primary btn-acc-wallet btn-lg mt-2 fw-semibold d-flex justify-content-between">
-                                    Сумма
-                                    <span><b>22 605</b> ₽</span>
-                                </button>
-                                <table class="account-wallet mt-4">
-                                    <tr>
-                                        <th>Дата</th>
-                                        <th>Комментарии</th>
-                                        <th>Сумма</th>
-                                    </tr>
-                                    <tr>
-                                        <td>2024-06-26 13:20:07</td>
-                                        <td>Оплата заказа RUNK-20</td>
-                                        <td>9 545.14 ₽</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2024-06-21 12:38:17</td>
-                                        <td>Возврат средств из-за изменения цены товара RUNK-42</td>
-                                        <td>9 545.14 ₽</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2024-06-20 18:21:46</td>
-                                        <td>Возврат средств из-за изменения количества товара RUNK-42</td>
-                                        <td>744.48 ₽</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2024-06-20 18:18:35</td>
-                                        <td>Возврат средств из-за изменения количества товара RUNK-42</td>
-                                        <td>7 444.80 ₽</td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
-                            <div class="profile-tab d-flex flex-column gap-2">
-                                <h2 class="title mb-3">Учётные данные</h2>
-                                <p class="item-title">Кузнецов Илья Дмитриевич</p>
-                                
-                                <div class="d-flex gap-5">
-                                    <div class="d-flex flex-column align-items-start">
-                                        <p class="text-sm c-gray mb-1">Телефон</p>
-                                        <p class="text-lg fw-medium mb-2">+7 926 123 21 32</p>
-                                        <button class="btn btn-blue p-0 w-fit text-lt">Изменить</button>
+                            <div class="support-chat w-xl-auto w-100">
+                                <p class="text-lg fw-medium mb-3">Служба поддержки</p>
+                                <div class="d-flex flex-column gap-2">
+                                    <div class="chat-message">
+                                        <p class="date text-lt">13:20  05 сентября 2024</p>
+                                        <p class="text-sm">Здравствуйте, Илья!<br> Чем мы можем вам помочь?</p>
                                     </div>
-                                    <div class="d-flex flex-column align-items-start">
-                                        <p class="text-sm c-gray mb-1">Email</p>
-                                        <p class="text-lg fw-medium mb-2">Kyz@mail.ru</p>
-                                        <button class="btn btn-blue p-0 w-fit text-lt">Изменить</button>
+                                    <div class="chat-message is-out">
+                                        <div class="d-flex align-items-center gap-1">
+                                            <p class="date text-lt">13:20  05 сентября 2024</p>
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M16.6654 5L7.4987 14.1667L3.33203 10" stroke="#9F9F9F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M19.1654 7.5L12.082 14.5833" stroke="#9F9F9F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+                                            </svg>
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M16.6654 5L7.4987 14.1667L3.33203 10" stroke="#547DFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M19.1654 7.5L12.082 14.5833" stroke="#547DFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>                                                    
+                                        </div>
+                                        <p class="text-sm">Здравствуйте, как ваши дела?)</p>
                                     </div>
                                 </div>
 
-                                <button class="btn btn-blue w-fit p-0 mt-3"  data-bs-toggle="modal" data-bs-target="#modal-profile-data">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10 16.6667H17.5M13.75 2.91669C14.0815 2.58517 14.5312 2.39893 15 2.39893C15.2321 2.39893 15.462 2.44465 15.6765 2.53349C15.891 2.62233 16.0858 2.75254 16.25 2.91669C16.4142 3.08085 16.5444 3.27572 16.6332 3.4902C16.722 3.70467 16.7678 3.93455 16.7678 4.16669C16.7678 4.39884 16.722 4.62871 16.6332 4.84319C16.5444 5.05766 16.4142 5.25254 16.25 5.41669L5.83333 15.8334L2.5 16.6667L3.33333 13.3334L13.75 2.91669Z" stroke="#547DFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>                                        
-                                    <span class="ms-2">Редактировать профиль</span>
-                                </button>
-
-                                <div class="separator my-3"></div>
-                                
-                                <p class="text-title fw-medium">Паспортные данные / другие данные</p>
-                                <p class="text-sm c-gray">Ваши данные в безопасности — 1688 хранит их в защищённом виде</p>
-                                <button class="btn btn-blue p-0 w-fit text-lt">Указать данные</button>
-                                
-                                <div class="separator my-3"></div>
-
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <p class="text-title fw-medium">Управление аккаунтом</p>
+                                <div class="d-flex align-items-center gap-2 mt-2">
                                     <button class="btn p-0">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M11 12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12Z" stroke="#B7B7B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path d="M11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18C11.4477 18 11 18.4477 11 19Z" stroke="#B7B7B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path d="M11 5C11 5.55228 11.4477 6 12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5Z" stroke="#B7B7B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M12 5V19M5 12H19" stroke="#B7B7B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>                                            
                                     </button>
+                                    <textarea id="chat-input" class="chat-input" placeholder="Введите сообщение"></textarea>
+                                    <button class="btn p-0">
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20.2828 11H4.72641M20.2828 11L1.19088 20.1924L4.72641 11M20.2828 11L1.19088 1.80766L4.72641 11" stroke="#B7B7B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>                                                                                     
+                                    </button>
                                 </div>
-                                <p class="text-sm c-gray">Вы с нами с 3 сентября 2024 года</p>
-                                <button class="btn btn-red p-0 w-fit">Выйти из аккаунта</button>
                             </div>
                         </div>
                       </div>

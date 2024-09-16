@@ -8,11 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (catalogMainItems) {
         catalogButton.addEventListener('click', ()=>{
-            catalogWrapper.classList.add('active')
+            catalogWrapper.classList.toggle('active')
         })
 
         catalogWrapper.addEventListener('click', (e)=>{
-            if (e.target.classList.contains('catalog-wrapper')) {
+            if (e.target.classList.contains('catalog-wrapper') && window.matchMedia("(min-width: 992px)").matches) {
                 catalogWrapper.classList.remove('active')
             }
         })

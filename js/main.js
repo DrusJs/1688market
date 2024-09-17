@@ -116,6 +116,48 @@ document.addEventListener('DOMContentLoaded', () => {
     if (removeButton) {
         removeButton.addEventListener('click', hideCheckedProducts)
     }
+    
+    const mobileTabsAccount = document.querySelectorAll('.nav-account [data-bs-toggle]')
+    const mobileTabsInfo = document.querySelectorAll('.nav-size [data-bs-toggle]')
+    const mobileTabBack = document.querySelectorAll('.tab-back')
+
+    if (mobileTabsAccount.length > 0) {
+        mobileTabsAccount.forEach(tab=>{
+            tab.addEventListener('click', (e)=>{
+                document.querySelector(e.currentTarget.dataset.bsTarget).classList.add('bs-show')
+            })
+        })
+
+        mobileTabBack.forEach(btn=>{
+            btn.addEventListener('click', (e)=>{
+                document.querySelector('.bs-show').classList.remove('bs-show')
+            })
+        })
+    }
+
+    if (mobileTabsInfo.length > 0) {
+        mobileTabsInfo.forEach(tab=>{
+            tab.addEventListener('click', (e)=>{
+                document.querySelector('.nav-size').classList.remove('active')
+            })
+        })
+
+        mobileTabBack.forEach(btn=>{
+            btn.addEventListener('click', (e)=>{
+                document.querySelector('.bs-show').classList.remove('bs-show')
+            })
+        })
+
+        document.querySelector('.show-nav').addEventListener('click', ()=>{
+            document.querySelector('.nav-size').classList.add('active')
+            document.querySelector('.close-nav').classList.add('active')
+        })
+
+        document.querySelector('.close-nav').addEventListener('click', (e)=>{
+            document.querySelector('.nav-size').classList.remove('active')
+            e.currentTarget.classList.remove('active')
+        })
+    }
 
     function handleUpdateCheckAll() {
         const allChecked = Array.from(checkItems).every(item => item.checked);

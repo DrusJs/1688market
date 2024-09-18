@@ -118,6 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     const mobileTabsAccount = document.querySelectorAll('.nav-account [data-bs-toggle]')
+    const mobileAccountBack = document.querySelectorAll('.account-back')
     const mobileTabsInfo = document.querySelectorAll('.nav-size [data-bs-toggle]')
     const mobileTabBack = document.querySelectorAll('.tab-back')
 
@@ -133,6 +134,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.querySelector('.bs-show').classList.remove('bs-show')
             })
         })
+
+        mobileAccountBack.forEach(btn=>{
+            btn.addEventListener('click', (e)=>{
+                document.querySelector('.bs-show').classList.remove('bs-show')
+            })
+        })        
     }
 
     if (mobileTabsInfo.length > 0) {

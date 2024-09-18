@@ -145,7 +145,7 @@
         </header>
         <main class="main flex-grow-1">
             <div class="container">
-                <div class="d-flex align-items-center justify-content-between">
+                <div class="breadcrumbs-flex d-flex align-items-center justify-content-between">
                     <div class="breadcrumbs d-flex align-items-center gap-1 mt-4">
                         <a class="link" href="catalog.html" class="breadcrumb-link">Одежда</a>
                         <div href="catalog.html" class="breadcrumb-dropdown dropdown js-active-items">
@@ -171,7 +171,23 @@
                 </div>
                 
                 <div class="product-section mt-4">
-                    <div class="product-main d-flex align-items-start">
+                    <div class="product-main position-relative d-flex align-items-start">
+                        <button class="btn btn-product-back p-0 position-absolute d-md-none">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_b_201_42863)">
+                                <rect width="40" height="40" rx="6" fill="#B9B9B9" fill-opacity="0.48"/>
+                                </g>
+                                <path d="M27 20L13 20M13 20L20 27M13 20L20 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <defs>
+                                <filter id="filter0_b_201_42863" x="-17.8" y="-17.8" width="75.6" height="75.6" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feGaussianBlur in="BackgroundImageFix" stdDeviation="8.9"/>
+                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_201_42863"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_201_42863" result="shape"/>
+                                </filter>
+                                </defs>
+                            </svg>                                
+                        </button>
                         <div class="d-grid swiper-grid">
                             <div thumbsSlider="" class="swiper swiper-pag">
                               <div class="swiper-wrapper">
@@ -216,11 +232,13 @@
                         </div>
 
                         <div class="product-main-info d-flex flex-column">
-                            <p class="test-sm">Футболка детская с принтом герои мультфильма Король лев, цвет серый/DSY00188-P1, размер 24 м</p>
-                            <div class="d-flex align-items-center justify-content-between gap-2">
-                                <button class="btn btn-blue text-sm fw-medium p-0">Описание</button>
-                                <button class="btn btn-blue text-sm fw-medium p-0">Характеристики</button>
-                                <button class="btn btn-blue text-sm fw-medium p-0">Ссылка на оригинал</button>
+                            <div class="d-xxl-flex d-none flex-column">
+                                <p class="test-sm">Футболка детская с принтом герои мультфильма Король лев, цвет серый/DSY00188-P1, размер 24 м</p>
+                                <div class="d-flex align-items-center justify-content-between gap-2">
+                                    <button class="btn btn-blue text-sm fw-medium p-0">Описание</button>
+                                    <button class="btn btn-blue text-sm fw-medium p-0">Характеристики</button>
+                                    <button class="btn btn-blue text-sm fw-medium p-0">Ссылка на оригинал</button>
+                                </div>
                             </div>
                             <p class="text-lt c-gray m-0">Цвет <span class="text c-text fw-medium ps-1">DSY00188-P1</span></p>
                             <div class="product-selectors">
@@ -290,7 +308,15 @@
                                 <button class="btn btn-blue p-0 w-fit">Все характеристики</button>                                
                             </div>
                         </div>
-                        <div class="product-main-action">
+                        <div class="product-main-action d-lg-flex d-none flex-column">
+                            <div class="d-xxl-none d-lg-flex d-none flex-column gap-3 mb-3">
+                                <p class="test-sm">Футболка детская с принтом герои мультфильма Король лев, цвет серый/DSY00188-P1, размер 24 м</p>
+                                <div class="d-flex align-items-center gap-2 flex-wrap">
+                                    <button class="btn btn-blue text-sm fw-medium p-0">Описание</button>
+                                    <button class="btn btn-blue text-sm fw-medium ms-2 p-0">Характеристики</button>
+                                    <button class="btn btn-blue text-sm fw-medium p-0">Ссылка на оригинал</button>
+                                </div>
+                            </div>
                             <div class="product-action-block">
                                 <div class="d-flex justify-content-between">
                                     <div class="d-flex gap-2 align-items-center">
@@ -308,7 +334,7 @@
                                 <p class="product-total">436 ₽</p>
                                 <button class="btn btn-primary btn-lg w-100">В корзину</button>
                             </div>
-                            <p class="item-title">Оптом</p>
+                            <p class="item-title mt-4">Оптом</p>
                             <div class="d-flex prod-row align-items-center gap-2">
                                 <p class="text-title c-text">1-9 шт.</p>
                                 <p class="text-title c-text">436 ₽</p>
@@ -323,7 +349,7 @@
                             </div>  
                         </div>
                     </div>
-                    <div class="product-flex">
+                    <div class="product-flex revers">
                         <div class="product-about">
                             <div class="product-about-image">
                                 <img src="img/pr-about.png" alt="">
@@ -349,7 +375,7 @@
                     </div>
 
                     <div class="product-flex">
-                        <div class="d-flex row-items flex-column w-50">
+                        <div class="d-flex row-items flex-column w-lg-50 w-100">
                             <p class="item-title fw-medium">О продавце</p>
                             <button class="btn btn-blue p-0 w-fit">Все характеристики</button>
                             <div class="d-flex gap-2 align-items-center border-bottom border-secondary">
@@ -428,7 +454,7 @@
 
                 </div>
                 
-                <h4 class="title">Другие товары продавца</h4>
+                <h4 class="title mt-lg-5 mt-4">Другие товары продавца</h4>
                 <div class="products-grid justify-content-center mt-4">
                     <div class="product-item">
                         <button class="btn fav-btn">
@@ -539,7 +565,7 @@
                         <div class="product-title">VENALISA Гель-лак для ногтей полуперманентный гель-лак для маникюра с долговечной эмалью</div>
                     </div>
                 </div>
-                <h4 class="title">Похожие товары</h4>
+                <h4 class="title mt-lg-5 mt-4">Похожие товары</h4>
                 <div class="products-grid justify-content-center mt-4">
                     <div class="product-item">
                         <button class="btn fav-btn">
@@ -775,7 +801,6 @@
         });
         var swiper2 = new Swiper(".swiper-main", {
           spaceBetween: 10,
-          effect: "fade",
           navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
@@ -783,6 +808,11 @@
           thumbs: {
             swiper: swiper,
           },
+          breakpoints: {
+            767: {
+                effect: 'fade',
+            },
+          }
         });
       </script>
 </body>

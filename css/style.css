@@ -1422,9 +1422,6 @@ input[type='checkbox']:checked + label::before {
     opacity: 0;
 }
 
-.modal {
-    z-index: 30;
-}
 
 .modal .modal-dialog {
     
@@ -1470,9 +1467,33 @@ input[type='checkbox']:checked + label::before {
     width: 100%;    
 }
 
+.btn-product-back {
+    top: 10px;
+    left: 10px;
+    z-index: 3;
+}
+
 @media (max-width: 1399.98px) { 
     .basket-wrapper {
         gap: 30px;
+    }
+    .product-main {
+        display: grid !important;
+        grid-template-columns: 620px 1fr;
+    }
+    .product-main-info {
+        order: 1;
+    }
+    .product-flex {
+        flex-direction: column;
+        margin-top: 40px;
+    }
+    .product-flex.revers {
+        flex-direction: column-reverse;
+    }
+    .product-main-action {
+        width: 100%;
+        min-width: auto;
     }
 }
 
@@ -1503,7 +1524,9 @@ input[type='checkbox']:checked + label::before {
     .container {
         padding: 0 15px;
     }
-
+    .product-main {
+        grid-template-columns: 1fr;
+    }
     .basket-wrapper {
         margin-left: -15px;
         width: 100vw;
@@ -1518,7 +1541,6 @@ input[type='checkbox']:checked + label::before {
     h1.title {
         font-size: 28px;
     }
-
     .basket-wrapper .basket-main,
     .basket-wrapper .basket-main-col {
         background-color: var(--color-white);
@@ -1647,6 +1669,9 @@ input[type='checkbox']:checked + label::before {
         position: relative;
         z-index: 10;
     }
+    .order-head .btn {
+        display: none;
+    }
     .header:has(.catalog-wrapper.active) .search-wrapper .search-input,
     body:has(.nav-size.active) .search-wrapper .search-input {
         background-color: #F6F6FA;
@@ -1729,6 +1754,9 @@ input[type='checkbox']:checked + label::before {
     h4.title, .item-title {
         font-size: 18px;
     }
+    .product-desc {
+        width: 100%;
+    }
 }
 
 @media (max-width: 767.98px) {  
@@ -1759,6 +1787,14 @@ input[type='checkbox']:checked + label::before {
         width: 100%;
         height: 400px;
     }
+    .swiper-pag  {
+        display: none;
+    }
+
+    body:has(.product-section) .header,
+    body:has(.product-section) .breadcrumbs-flex {
+        display: none !important;
+    }
 
     .tab-size > .tab-pane {
         background-color: var(--color-white);
@@ -1766,6 +1802,9 @@ input[type='checkbox']:checked + label::before {
         border-radius: 10px;
         width: 100%;
         transition: none;
+    }
+    .swiper-grid {
+        grid-template-columns: 1fr;
     }
 
     .tab-size {
@@ -1794,6 +1833,57 @@ input[type='checkbox']:checked + label::before {
 
     .btn.close-nav.active {
         display: flex;
+    }
+    .account-wrapper .tab-content > .tab-pane {
+        display: none;
+    }
+    .nav-account {
+        width: 100%;
+    }
+
+    .nav-account .nav-link.active,
+    .nav-account .nav-link {
+        color: #323234;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        width: 100%;
+        border-bottom: 1px solid #DBDBDB;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        justify-content: space-between;
+    }
+
+    .nav-account .nav-link.logout {
+        border-bottom: none;
+        padding-top: 10px;
+        width: 100%;
+    }
+
+    .nav-account .nav-link:not(.logout)::after {
+        content: '';
+        width: 24px;
+        min-width: 24px;
+        height: 24px;
+        display: block;
+        background-image: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 13L7 7L1 1' stroke='%23B7B7B8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .account-wrapper:has(.bs-show) .nav-account {
+        display: none;
+    }
+    .account-wrapper .tab-content > .tab-pane.bs-show {
+        display: block;
+    }
+    .account-wrapper .tab-content:has(.bs-show) {
+        width: 100%;
+    }
+
+    .account-back {
+        margin-right: -20px;
     }
 }
 
@@ -1850,6 +1940,31 @@ input[type='checkbox']:checked + label::before {
     }
     .back-link {
         font-size: 18px;
+    }
+
+    .pagination {
+        overflow: hidden;
+        justify-content: flex-start;
+    }
+    .account-wallet td,
+    .account-wallet th {
+        font-size: 14px;
+    }
+    .status {
+        padding: 0;
+    }
+
+    .status.success {
+        color: var(--color-green);
+        background-color: transparent;
+    }
+    .status.await {
+        color: var(--color-yellow);
+        background-color: transparent;
+    }
+    .status.refuse {
+        color: #D92D20;
+        background-color: transparent;
     }
 
     .catalog-button {

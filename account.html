@@ -141,8 +141,8 @@
         </header>
         <main class="main flex-grow-1">
             <div class="container">
-                <div class="account-wrapper d-flex align-items-start gap-4 mt-5">
-                    <div class="nav flex-column nav-pills nav-account gap-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <div class="account-wrapper d-flex align-items-start gap-md-4 mt-5">
+                    <div class="nav flex-column nav-pills nav-account gap-md-3 gap-0" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 
                         <button class="nav-link active" id="v-pills-delivery-tab" data-bs-toggle="pill" data-bs-target="#v-pills-delivery" type="button" role="tab" aria-controls="v-pills-delivery" aria-selected="true">Доставка</button>
 
@@ -154,8 +154,16 @@
 
                         <button class="nav-link logout">Выход</button>
                       </div>
-                      <div class="tab-content w-100" id="v-pills-tabContent">
+                      <div class="tab-content w-md-100" id="v-pills-tabContent">
                         <div class="tab-pane fade show active" id="v-pills-delivery" role="tabpanel" aria-labelledby="v-pills-delivery-tab" tabindex="0">
+                            <div class="d-md-none d-flex align-items-center mb-3">
+                                <button class="btn p-0 account-back">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 8L1 8M1 8L8 15M1 8L8 1" stroke="#0E0E10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                        
+                                </button>
+                                <p class="c-text d-block mx-auto">Доставка</p>
+                            </div>
                             <div class="d-flex flex-column gap-2">
                                 <h2 class="title mb-3">Данные</h2>
                                 <p class="item-title">Кузнецов Илья Дмитриевич</p>
@@ -170,6 +178,14 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="v-pills-orders" role="tabpanel" aria-labelledby="v-pills-orders-tab" tabindex="0">
+                            <div class="d-md-none d-flex align-items-center mb-3">
+                                <button class="btn p-0 account-back">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 8L1 8M1 8L8 15M1 8L8 1" stroke="#0E0E10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                        
+                                </button>
+                                <p class="c-text d-block mx-auto">Заказы</p>
+                            </div>
                             <div class="d-flex flex-column gap-2">
                                 <h2 class="title">Активные заказы<span class="c-gray ps-3">1</span></h2>
                                 <div class="dropdown js-active-items mb-4">
@@ -310,6 +326,14 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="v-pills-wallet" role="tabpanel" aria-labelledby="v-pills-wallet-tab" tabindex="0">
+                            <div class="d-md-none d-flex align-items-center mb-3">
+                                <button class="btn p-0 account-back">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 8L1 8M1 8L8 15M1 8L8 1" stroke="#0E0E10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                        
+                                </button>
+                                <p class="c-text d-block mx-auto">Кошелек</p>
+                            </div>
                             <div class="d-flex flex-column gap-2">
                                 <div class="d-flex align-items-end gap-4">
                                     <h2 class="title m-0">Счет</h2>
@@ -349,6 +373,14 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
+                            <div class="d-md-none d-flex align-items-center mb-3">
+                                <button class="btn p-0 account-back">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 8L1 8M1 8L8 15M1 8L8 1" stroke="#0E0E10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                        
+                                </button>
+                                <p class="c-text d-block mx-auto">Профиль</p>
+                            </div>
                             <div class="profile-tab d-flex flex-column gap-2">
                                 <h2 class="title mb-3">Учётные данные</h2>
                                 <p class="item-title">Кузнецов Илья Дмитриевич</p>

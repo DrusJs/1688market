@@ -1515,6 +1515,9 @@ input[type='checkbox']:checked + label::before {
         max-width: 400px;
         width: 100%;
     }
+    .support-chat {
+        width: 100%;
+    }
 }
 
 @media (max-width: 991.98px) {  

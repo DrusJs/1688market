@@ -1034,6 +1034,10 @@ h2.title .c-gray {
     color: var(--color-primary);
 }
 
+.tab-content {
+    width: 100%;
+}
+
 .account-wrapper .tab-content .tab-pane {
     background-color: var(--color-white);
     border-radius: 20px;
@@ -1887,6 +1891,9 @@ input[type='checkbox']:checked + label::before {
 
     .account-back {
         margin-right: -20px;
+    }
+    .tab-content {
+        width: auto;
     }
 }
 

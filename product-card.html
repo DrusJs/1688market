@@ -189,7 +189,7 @@
                             </svg>                                
                         </button>
                         <div class="d-grid swiper-grid">
-                            <div thumbsSlider="" class="swiper swiper-pag">
+                            <div thumbsSlider="" class="swiper swiper-pag" id="swiper-pag">
                               <div class="swiper-wrapper">
                                   <div class="swiper-slide">
                                     <img src="img/swiper1.png" />
@@ -208,21 +208,21 @@
                                   </div>
                               </div>
                             </div>
-                            <div class="swiper swiper-main">
+                            <div class="swiper swiper-main" id="swiper-main">
                                 <div class="swiper-wrapper">
-                                  <div class="swiper-slide">
+                                  <div class="swiper-slide 1" data-bs-toggle="modal" data-bs-target="#modal-preview">
                                     <img src="img/swiper1.png" />
                                   </div>
-                                  <div class="swiper-slide">
+                                  <div class="swiper-slide" data-bs-toggle="modal" data-bs-target="#modal-preview">
                                     <img src="img/swiper2.png" />
                                   </div>
-                                  <div class="swiper-slide">
+                                  <div class="swiper-slide" data-bs-toggle="modal" data-bs-target="#modal-preview">
                                     <img src="img/swiper3.png" />
                                   </div>
-                                  <div class="swiper-slide">
+                                  <div class="swiper-slide" data-bs-toggle="modal" data-bs-target="#modal-preview">
                                     <img src="img/swiper4.png" />
                                   </div>
-                                  <div class="swiper-slide">
+                                  <div class="swiper-slide" data-bs-toggle="modal" data-bs-target="#modal-preview">
                                     <img src="img/swiper5.png" />
                                   </div>
                                 </div>
@@ -787,19 +787,75 @@
           </div>
         </div>
       </div>
+
+
+
+    <div class="modal fade dark-bg" id="modal-preview" tabindex="-1">
+        <div class="modal-dialog swiper-dialog">
+          <div class="modal-content modal-auth">
+            <button type="button" class="btn bg-transparent ms-auto" data-bs-dismiss="modal" aria-label="Close">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 1L1 21M1 1L21 21" stroke="#9F9F9F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                    
+            </button>
+            <div class="d-grid swiper-grid">
+                <div thumbsSlider="" class="swiper swiper-pag" id="pag-modal">
+                  <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="img/swiper1.png" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/swiper2.png" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/swiper3.png" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/swiper4.png" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/swiper5.png" />
+                      </div>
+                  </div>
+                </div>
+                <div class="swiper swiper-main btn-enable" id="swiper-modal">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="img/swiper1.png" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/swiper2.png" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/swiper3.png" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/swiper4.png" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/swiper5.png" />
+                      </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
     
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/main.js"></script>
 
     <script>
-        var swiper = new Swiper(".swiper-pag", {
+        const swiper = new Swiper("#swiper-pag", {
           spaceBetween: 10,
           slidesPerView: 4,
           direction: "vertical",
           watchSlidesProgress: true,
         });
-        var swiper2 = new Swiper(".swiper-main", {
+        const swiper2 = new Swiper("#swiper-main", {
           spaceBetween: 10,
           navigation: {
             nextEl: ".swiper-button-next",
@@ -808,11 +864,36 @@
           thumbs: {
             swiper: swiper,
           },
-          breakpoints: {
-            767: {
-                effect: 'fade',
-            },
-          }
+        //   breakpoints: {
+        //     767: {
+        //         effect: 'fade',
+        //     },
+        //   }
+        });
+        const swiperModal = new Swiper("#pag-modal", {
+          spaceBetween: 10,
+          slidesPerView: 4,
+          direction: "vertical",
+          watchSlidesProgress: true,
+        });
+        const swiperModal2 = new Swiper("#swiper-modal", {
+          slidesPerView: 1,
+          spaceBetween: 200,
+          centeredSlides: 'true',
+          loop: 'true',
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          thumbs: {
+            swiper: swiperModal,
+          },
+          
+        //   breakpoints: {
+        //     767: {
+        //         effect: 'fade',
+        //     },
+        //   }
         });
       </script>
 </body>

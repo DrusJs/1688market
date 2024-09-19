@@ -1334,7 +1334,8 @@ input[type='checkbox']:checked + label::before {
     transform: translateX(-50%) translateY(0px);
 }
 
-.fixed-product .price {
+.fixed-product .price,
+.modal .price {
     font-weight: 700;
     font-size: 35px;
 }
@@ -1433,6 +1434,9 @@ input[type='checkbox']:checked + label::before {
     border: 1px solid #DBDBDB;
     cursor: pointer;
 }
+.product-option p {
+    margin-bottom: 0;
+}
 .product-option img {
     width: 100%;
     height: 100%;
@@ -1511,8 +1515,51 @@ input[type='checkbox']:checked + label::before {
     flex-direction: column;
 }
 
+.modal .modal-content.modal-product {
+    flex-direction: row;
+    gap: 20px;
+    padding-bottom: 0;
+    overflow: hidden;
+    padding-left: 0;
+}
+
+.modal .modal-content.modal-product .swiper-main {
+    padding: 0;
+    max-width: 500px;
+    overflow: hidden;
+}
+
+.modal .modal-content.modal-product .swiper-main .swiper-slide {
+    min-width: 500px;
+}
+
+.modal .modal-content.modal-product .swiper-main .swiper-button-next,
+.modal .modal-content.modal-product .swiper-main .swiper-button-prev {
+    width: 30px;
+    height: 120px;
+    background-color: rgba(219, 219, 219, 0.6);
+    border-radius: 10px;
+    backdrop-filter: blur(8px);
+    top: 40%;
+}
+
+.modal .modal-content.modal-product .swiper-main .swiper-button-next::after,
+.modal .modal-content.modal-product .swiper-main .swiper-button-prev::after {
+    font-size: 20px;
+}
+
+.modal .modal-dialog:has(.modal-product) {
+    max-width: 1000px;
+}
+
 .modal-auth {    
     gap: 10px;
+}
+
+.product-more {
+    color: var(--color-black-primary);
+    border-top: 1px solid #E3E3E3;
+    margin-top: auto;
 }
 
 .modal-auth .btn-close,

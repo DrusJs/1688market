@@ -166,6 +166,14 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
+    const fixedItem = document.querySelector('.fixed-product')
+
+    if (fixedItem) {
+        window.addEventListener('scroll', ()=>{
+            handleScroll(fixedItem, 800)
+        });
+    }
+
     function handleUpdateCheckAll() {
         const allChecked = Array.from(checkItems).every(item => item.checked);
         checkAll.checked = allChecked;
@@ -212,3 +220,10 @@ function handleCounterAction(item) {
     }
 }
 
+function handleScroll(el, height) {
+    if (+window.scrollY >= +height) {
+      el.classList.add('active');
+    } else {
+      el.classList.remove('active');
+    }
+  }

@@ -235,6 +235,19 @@ h2.title .c-gray {
     height: 90px;
 }
 
+.nav-counter {
+    position: absolute;
+    top: 0;
+    right: calc(50% - 17px - 10px);
+    background-color: #93EF4D;
+    color: var(--color-black-primary);
+    border-radius: 5px;
+    padding: 1px 6px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+}
+
 .search-wrapper {
     width: 100%;
     max-width: 800px;

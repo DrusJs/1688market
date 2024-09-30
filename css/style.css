@@ -645,6 +645,27 @@ h2.title .c-gray {
     margin-left: 8px;
 }
 
+.mobile-product {
+    position: fixed;
+    width: 100%;
+    background-color: var(--color-white);
+    left: 0;
+    z-index: 12;
+    bottom: 66px;
+    border-bottom: 1px solid #DBDBDB;
+    padding: 5px 10px;
+}
+
+.mobile-product-inner {
+    max-width: 360px;
+    margin: 0 auto;
+    height: 80px;
+}
+
+.mobile-product-inner .fav-btn {
+    position: static;
+}
+
 .product-price .product-cnt {
     margin-left: 8px;
 }
@@ -655,10 +676,15 @@ h2.title .c-gray {
 }
 
 .product-main-action .counter .btn,
-.product-main-action .counter {
+.product-main-action .counter  {
     background-color: #FCE4DE;
     min-height: 56px;
 }
+.mobile-product .counter .btn,
+.mobile-product .counter {
+    background-color: #FCE4DE;
+}
+
 
 .cnt-wrapper .btn.disabled {
     opacity: 1;
@@ -2338,7 +2364,8 @@ input[type='checkbox']:checked + label::before {
     .counter .btn:hover {
         background-color: #E6E6E6;
     }
-    .product-main-action .counter .btn:hover {
+    .product-main-action .counter .btn:hover,
+    .mobile-product .counter .btn:hover {
         background-color: #f1d9d3;
     }
     .support-chat .btn:hover path {

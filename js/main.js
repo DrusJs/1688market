@@ -116,6 +116,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (removeButton) {
         removeButton.addEventListener('click', hideCheckedProducts)
     }
+
+    const productCnt = document.querySelector('.js-cnt-active')
+    if(productCnt) {
+        productCnt.addEventListener('click', (e)=>{
+            e.currentTarget.parentElement.classList.add('active')
+        })
+    }
     
     const mobileTabsAccount = document.querySelectorAll('.nav-account [data-bs-toggle]')
     const mobileAccountBack = document.querySelectorAll('.account-back')

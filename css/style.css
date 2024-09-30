@@ -654,6 +654,35 @@ h2.title .c-gray {
     font-weight: 700;
 }
 
+.product-main-action .counter .btn,
+.product-main-action .counter {
+    background-color: #FCE4DE;
+    min-height: 56px;
+}
+
+.cnt-wrapper .btn.disabled {
+    opacity: 1;
+    background-color: #FCE4DE;
+    color: var(--color-primary);
+    border-radius: 10px;
+}
+
+.cnt-wrapper .btn {
+    min-height: 56px;
+}
+
+.product-main-action .counter {
+    border-radius: 10px;
+}
+
+.product-main-action .counter .btn.cnt-minus {
+    border-radius: 10px 0 0 10px;
+}
+
+.product-main-action .counter .btn.cnt-plus {
+    border-radius: 0 10px 10px 0;
+}
+
 .product-main-action .btn.btn-primary {
     font-weight: 600;
 }
@@ -1371,7 +1400,7 @@ input[type='checkbox']:checked + label::before {
 
 
 .modal .swiper-main {
-    padding: 0 150px;
+    padding: 0 70px;
 }
 
 .modal .swiper-button-next, .modal .swiper-button-prev {
@@ -1513,12 +1542,56 @@ input[type='checkbox']:checked + label::before {
     opacity: 0;
 }
 
+.cnt-active {
+    display: none;
+    align-items: center;
+    gap: 8px;
+}
+
+.cnt-wrapper.active .cnt-active {
+    display: flex;
+}
+
+.cnt-wrapper.active > .btn:first-child {
+    display: none;
+}
+
 
 .modal .modal-dialog {    
     padding: 0 15px;
 }
 .modal-dialog.swiper-dialog {
+    position: static;
     max-width: 1000px;
+}
+
+.modal:has(.swiper-dialog) {
+    overflow: hidden;
+}
+
+.modal-dialog.swiper-dialog .swiper-main .swiper-slide {
+    max-height: calc(100dvh - 40px);
+}
+
+.modal-dialog.swiper-dialog .modal-content {
+    position: static;
+    height: calc(100dvh - 40px);
+    padding: 0 20px;
+}
+
+.modal-dialog.swiper-dialog .swiper-pag {
+    max-height: calc(100dvh - 40px);
+}
+
+.modal-dialog.swiper-dialog .modal-content .btn.bg-transparent {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    opacity: 0;
+    transition: opacity 200ms ease-in-out 300ms;
+}
+.modal.show .modal-dialog.swiper-dialog .modal-content .btn.bg-transparent {
+    opacity: 1;
 }
 
 .modal .modal-content {
@@ -2264,6 +2337,9 @@ input[type='checkbox']:checked + label::before {
     }
     .counter .btn:hover {
         background-color: #E6E6E6;
+    }
+    .product-main-action .counter .btn:hover {
+        background-color: #f1d9d3;
     }
     .support-chat .btn:hover path {
         stroke: var(--color-primary);

@@ -1998,6 +1998,12 @@ input[type='checkbox']:checked + label::before {
     .product-desc {
         width: 100%;
     }
+    .modal .swiper-pag {
+        display: none;
+    }
+    .modal .swiper-grid {
+        display: flex !important;
+    }
 }
 
 @media (max-width: 767.98px) {  
